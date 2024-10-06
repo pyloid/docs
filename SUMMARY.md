@@ -1,20 +1,26 @@
-# Table of contents
+# Table of Contents
 
-* [💎 What is Pylon?](README.md)
+- [💎 What is Pylon?](README.md)
 
 ## Getting Started
 
-* [Installation](getting-started/installation.md)
-* [Creating a Project](getting-started/creating-a-project.md)
+- [Installation](getting-started/installation.md)
+- [Creating a Project](getting-started/creating-a-project.md)
 
 ## API
 
-* [Python (Backend)](api/python-backend/README.md)
-  * [Page 1](api/python-backend/page-1.md)
-* [Javascript (Frontend)](api/javascript-frontend/README.md)
-  * [WindowAPI](api/javascript-frontend/windowapi.md)
-* [Build](api/build.md)
+- [Python (Backend)](api/python-backend/README.md)
+  - [PylonApp](api/python-backend/pylonapp.md)
+  - [BrowserWindow](api/python-backend/browserwindow.md)
+  - [PylonAPI](api/python-backend/pylonapi.md)
+  - [Monitor](api/python-backend/monitor.md)
+  - [TrayEvent](api/python-backend/trayevent.md)
+  - [Utility Functions](api/python-backend/utils.md)
+- [Javascript (Frontend)](api/javascript-frontend/README.md)
+  - [WindowAPI](api/javascript-frontend/windowapi.md)
+- [Build](api/build.md)
 
-## GUIDES
+## Guides
 
-* [Page 2](guides/page-2.md)
+- [Build Guide](guides/build-guide/README.md)
+  - [Pylon-React](guides/build-guide/pylon-react.md)
