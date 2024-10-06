@@ -18,7 +18,6 @@
   - [Utility Functions](api/python-backend/utils.md)
 - [Javascript (Frontend)](api/javascript-frontend/README.md)
   - [WindowAPI](api/javascript-frontend/windowapi.md)
-- [Build](api/build.md)
 
 ## Guides
 
