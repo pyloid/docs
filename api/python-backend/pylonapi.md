@@ -43,4 +43,22 @@ class CustomAPI(PylonAPI):
         window.focus()
 
         return window.id
+
+window = app.create_window(
+    title="Pylon Browser1",
+    frame=True,
+    js_apis=[CustomAPI()],
+    dev_tools=True
+)
+
+if (is_production()):
+    window.load_file(os.path.join(get_production_path() + "/index.html"))
+else:
+    window.load_file("index.html")
+
+window.show()
+window.focus()
+
+app.run()
+
 ```
