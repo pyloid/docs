@@ -1,5 +1,3 @@
-네, 요청하신 대로 파이썬 함수들을 `python` 코드 블록 안에 넣어 수정하겠습니다. 여기 수정된 버전입니다:
-
 # BrowserWindow
 
 ## Overview
