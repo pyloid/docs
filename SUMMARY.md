@@ -18,6 +18,7 @@
   - [Utility Functions](api/python-backend/utils.md)
 - [Javascript (Frontend)](api/javascript-frontend/README.md)
   - [WindowAPI](api/javascript-frontend/windowapi.md)
+  - [EventAPI](api/javascript-frontend/eventapi.md)
 
 ## Guides
 
