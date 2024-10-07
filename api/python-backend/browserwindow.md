@@ -115,6 +115,14 @@ Returns the properties of the window.
 - **Returns**: dict: A dictionary containing the window properties
 
 ```python
+def get_id(self) -> str:
+```
+
+Returns the ID of the window.
+
+- **Returns**: str: The window ID
+
+```python
 def hide(self) -> None:
 ```
 
