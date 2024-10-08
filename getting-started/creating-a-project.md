@@ -2,6 +2,10 @@
 
 ### Create Project 📦
 
-#### Creating a React + Pylon Project
+#### Creating a HTML/CSS/JS + Pylon Project 🌐
 
-Boilerplate address: [https://github.com/python-pylon/pylon-react-boilerplate](https://github.com/python-pylon/pylon-react-boilerplate)
+[https://github.com/python-pylon/pylon-html-boilerplate](https://github.com/python-pylon/pylon-html-boilerplate)
+
+#### Creating a React + Vite + Pylon Project ⚛️
+
+[https://github.com/python-pylon/pylon-react-boilerplate](https://github.com/python-pylon/pylon-react-boilerplate)

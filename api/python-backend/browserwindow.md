@@ -216,3 +216,13 @@ Returns all shortcuts registered to the window.
 
 - **Returns**:
   - dict: A dictionary containing shortcut sequences and their QShortcut objects
+
+```python
+def emit(self, event_name: str, data: Optional[Dict] = None) -> None:
+```
+
+Emits an event to the JavaScript side.
+
+- **Parameters**:
+  - `event_name` (str): Name of the event
+  - `data` (Optional[Dict]): Data to be sent with the event (default: None)

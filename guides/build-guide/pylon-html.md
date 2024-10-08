@@ -2,9 +2,9 @@
 icon: file-code
 ---
 
-# Pylon-React
+# Pylon-Html
 
-Pylon-React-Boilerplate is a template for projects combining a React frontend with a Python backend. Here, we'll explain in detail the project setup, development, and build process.
+Pylon-Html-Boilerplate is a template for projects combining a HTML/CSS/JS frontend with a Python backend. Here, we'll explain in detail the project setup, development, and build process.
 
 ## 1. Project Initialization
 

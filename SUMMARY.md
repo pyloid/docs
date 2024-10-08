@@ -23,4 +23,6 @@
 ## Guides
 
 - [Build Guide](guides/build-guide/README.md)
-  - [Pylon-React](guides/build-guide/pylon-react.md)
+  - [Pylon-React-Vite](guides/build-guide/pylon-react.md)
+  - [Pylon-HTML-Boilerplate](guides/build-guide/pylon-html.md)
+  

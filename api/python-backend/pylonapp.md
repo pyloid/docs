@@ -326,6 +326,42 @@ Retrieves an image from the clipboard.
 
 - `Optional[QImage]`: Image from the clipboard or None (if no image).
 
+### Autostart
+
+#### set_auto_start
+
+```python
+def set_auto_start(self, enable: bool):
+```
+
+Sets the application to start automatically with the system.
+
+##### Parameters
+
+- `enable` (bool): True to enable auto-start, False to disable.
+
+##### Notes
+
+- `set_auto_start(True)` only works in production environment.
+- `set_auto_start(False)` works in both production and non-production environments.
+- In non-production environment, calling `set_auto_start(True)` will print a warning message and return None.
+
+##### Returns
+
+- `bool`: True if auto-start is successfully enabled, False if disabled, None if not supported in the current environment.
+
+#### is_auto_start
+
+```python
+def is_auto_start(self):
+```
+
+Checks if the application is set to start automatically with the system.
+
+##### Returns
+
+- `bool`: True if auto-start is enabled, False otherwise.
+
 ### Miscellaneous
 
 #### set_icon
