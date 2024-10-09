@@ -1,12 +1,12 @@
-# 💎 What is Pylon?
+# 💎 What is pylon-app?
 
-## Pylon 👋
+## pylon-app 👋
 
-Pylon is the Python backend version of Electron and Tauri, designed to simplify desktop application development. This open-source project provides seamless integration with various Python features, making it easy to build powerful applications effortlessly.
+pylon-app is the Python backend version of Electron and Tauri, designed to simplify desktop application development. This open-source project, built on **QtWebEngine** and **PySide6**, provides seamless integration with various Python features, making it easy to build powerful applications effortlessly.
 
-### 🚀 Why Pylon?
+### 🚀 Why pylon-app?
 
-With Pylon, you can leverage the full power of Python in your desktop applications. Its simplicity and flexibility make it the perfect choice for both beginners and experienced developers looking for a Python-focused alternative to Electron or Tauri. It is especially optimized for building AI-powered desktop applications.
+With pylon-app, you can leverage the full power of Python in your desktop applications. Its simplicity and flexibility make it the perfect choice for both beginners and experienced developers looking for a Python-focused alternative to Electron or Tauri. It is especially optimized for building AI-powered desktop applications.
 
 ### Key Features 🚀
 
@@ -24,6 +24,9 @@ With Pylon, you can leverage the full power of Python in your desktop applicatio
 ### Quick Start Templates (🛠️ More frontend templates coming soon)
 
 * **HTML/CSS/JS Template**: Provides a template to quickly start an app using basic web technologies.
+[pylon-app_html_boilerplate](https://github.com/python-pylon/pylon-app_html_boilerplate)
+
 * **React Template**: Includes a template to build a modern UI using React.
+[pylon-app_react_boilerplate](https://github.com/python-pylon/pylon-app_react_boilerplate)
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Start Pylon Project</td><td></td><td></td><td><a href="getting-started/installation.md">installation.md</a></td></tr><tr><td>References</td><td>Python/Js API Reference</td><td></td><td></td><td><a href="api/python-backend/">python-backend</a></td></tr><tr><td><strong>Guides</strong></td><td>Pylon Guide</td><td></td><td></td><td><a href="guides/build-guide/">build-guide</a></td></tr></tbody></table>

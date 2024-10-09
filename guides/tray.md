@@ -1,6 +1,6 @@
 # Tray
 
-Pylon apps make it easy to implement system tray functionality. This guide explains how to set up a tray icon, handle events, and add menu items.
+pylon-app make it easy to implement system tray functionality. This guide explains how to set up a tray icon, handle events, and add menu items.
 
 ## Setting up the Tray Icon
 
