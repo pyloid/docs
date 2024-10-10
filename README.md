@@ -1,4 +1,4 @@
-# 💎 What is Pyloid?
+# What is Pyloid?
 
 ## Pyloid 👋
 
@@ -23,10 +23,10 @@ With Pyloid, you can leverage the full power of Python in your desktop applicati
 
 ### Quick Start Templates (🛠️ More frontend templates coming soon)
 
-* **HTML/CSS/JS Template**: Provides a template to quickly start an app using basic web technologies.
-[pyloid-html-boilerplate](https://github.com/pyloid/pyloid-html-boilerplate)
+- **HTML/CSS/JS Template**: Provides a template to quickly start an app using basic web technologies.
+  [pyloid-html-boilerplate](https://github.com/pyloid/pyloid-html-boilerplate)
 
-* **React Template**: Includes a template to build a modern UI using React.
-[pyloid-react-boilerplate](https://github.com/pyloid/pyloid-react-boilerplate)
+- **React Template**: Includes a template to build a modern UI using React.
+  [pyloid-react-boilerplate](https://github.com/pyloid/pyloid-react-boilerplate)
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Start Pyloid Project</td><td></td><td></td><td><a href="getting-started/installation.md">installation.md</a></td></tr><tr><td>References</td><td>Python/Js API Reference</td><td></td><td></td><td><a href="api/python-backend/">python-backend</a></td></tr><tr><td><strong>Guides</strong></td><td>Pyloid Guide</td><td></td><td></td><td><a href="guides/build-guide/">build-guide</a></td></tr></tbody></table>
