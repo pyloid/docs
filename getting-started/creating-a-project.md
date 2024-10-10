@@ -2,10 +2,10 @@
 
 ### Create Project 📦
 
-#### Creating a HTML/CSS/JS + pylon-app Project 🌐
+#### Creating a HTML/CSS/JS + Pyloid Project 🌐
 
-[https://github.com/python-pylon/pylon-html-boilerplate](https://github.com/python-pylon/pylon-html-boilerplate)
+[https://github.com/pyloid/pyloid-html-boilerplate](https://github.com/pyloid/pyloid-html-boilerplate)
 
-#### Creating a React + Vite + pylon-app Project ⚛️
+#### Creating a React + Vite + Pyloid Project ⚛️
 
-[https://github.com/python-pylon/pylon-react-boilerplate](https://github.com/python-pylon/pylon-react-boilerplate)
+[https://github.com/pyloid/pyloid-react-boilerplate](https://github.com/pyloid/pyloid-react-boilerplate)

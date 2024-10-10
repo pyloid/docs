@@ -13,7 +13,7 @@
 ## Usage Example
 
 ```python
-from PylonApp import PylonApp, TrayEvent
+from Pyloid import Pyloid, TrayEvent
 
 app.set_tray_actions(
     {

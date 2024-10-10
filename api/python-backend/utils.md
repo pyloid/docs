@@ -37,7 +37,7 @@ This function checks if the current execution environment is a production enviro
 ### Example 1
 
 ```python
-app = PylonApp(single_instance=True)
+app = Pyloid(single_instance=True)
 
 if (is_production()):
     app.set_icon(os.path.join(get_production_path() + "/icon.ico"))

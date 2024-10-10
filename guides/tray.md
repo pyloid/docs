@@ -45,7 +45,10 @@ Each menu item is defined as a dictionary with `label` and `callback` keys.
 Here's a complete example implementing tray functionality:
 
 ```python
-app = PylonApp("Pylon-App", single_instance=True)
+import os
+from pyloid import PyloidApp, TrayEvent, is_production, get_production_path
+
+app = PyloidApp("Pyloid-App", single_instance=True)
 
 if (is_production()):
     app.set_icon(os.path.join(get_production_path(), "icon.ico"))

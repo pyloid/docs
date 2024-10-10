@@ -2,11 +2,11 @@
 
 ## WindowAPI (JavaScript) Documentation
 
-The `WindowAPI` provides various methods to interact with a window in the Pylon application. Each method is available through JavaScript using `window.WindowAPI` and can be called with `await` for asynchronous operation or as a Promise. Below is a detailed overview of each method available through this API.
+The `WindowAPI` provides various methods to interact with a window in the Pyloid application. Each method is available through JavaScript using `window.pyloid.WindowAPI` and can be called with `await` for asynchronous operation or as a Promise. Below is a detailed overview of each method available through this API.
 
 ### Usage
 
-To use any method in the `WindowAPI`, simply call it using `window.WindowAPI.<methodName>()`. Most methods return a Promise and can be used with `await` for synchronous-like behavior in an asynchronous environment.
+To use any method in the `WindowAPI`, simply call it using `window.pyloid.WindowAPI.<methodName>()`. Most methods return a Promise and can be used with `await` for synchronous-like behavior in an asynchronous environment.
 
 ***
 
@@ -18,7 +18,7 @@ To use any method in the `WindowAPI`, simply call it using `window.WindowAPI.<me
 **Usage**:
 
 ```javascript
-const windowId = await window.WindowAPI.getWindowId();
+const windowId = await window.pyloid.WindowAPI.getWindowId();
 console.log(windowId);
 ```
 
@@ -30,7 +30,7 @@ console.log(windowId);
 **Usage**:
 
 ```javascript
-await window.WindowAPI.close();
+await window.pyloid.WindowAPI.close();
 ```
 
 #### 3. `hide()`
@@ -41,7 +41,7 @@ await window.WindowAPI.close();
 **Usage**:
 
 ```javascript
-await window.WindowAPI.hide();
+await window.pyloid.WindowAPI.hide();
 ```
 
 #### 4. `show()`
@@ -52,7 +52,7 @@ await window.WindowAPI.hide();
 **Usage**:
 
 ```javascript
-await window.WindowAPI.show();
+await window.pyloid.WindowAPI.show();
 ```
 
 #### 5. `toggleFullscreen()`
@@ -63,7 +63,7 @@ await window.WindowAPI.show();
 **Usage**:
 
 ```javascript
-await window.WindowAPI.toggleFullscreen();
+await window.pyloid.WindowAPI.toggleFullscreen();
 ```
 
 #### 6. `minimize()`
@@ -74,7 +74,7 @@ await window.WindowAPI.toggleFullscreen();
 **Usage**:
 
 ```javascript
-await window.WindowAPI.minimize();
+await window.pyloid.WindowAPI.minimize();
 ```
 
 #### 7. `maximize()`
@@ -85,7 +85,7 @@ await window.WindowAPI.minimize();
 **Usage**:
 
 ```javascript
-await window.WindowAPI.maximize();
+await window.pyloid.WindowAPI.maximize();
 ```
 
 #### 8. `unmaximize()`
@@ -96,7 +96,7 @@ await window.WindowAPI.maximize();
 **Usage**:
 
 ```javascript
-await window.WindowAPI.unmaximize();
+await window.pyloid.WindowAPI.unmaximize();
 ```
 
 #### 9. `setTitle(title: string)`
@@ -109,7 +109,7 @@ await window.WindowAPI.unmaximize();
 **Usage**:
 
 ```javascript
-await window.WindowAPI.setTitle("My App Window");
+await window.pyloid.WindowAPI.setTitle("My App Window");
 ```
 
 #### 10. `setSize(width: number, height: number)`
@@ -123,7 +123,7 @@ await window.WindowAPI.setTitle("My App Window");
 **Usage**:
 
 ```javascript
-await window.WindowAPI.setSize(800, 600);
+await window.pyloid.WindowAPI.setSize(800, 600);
 ```
 
 #### 11. `setPosition(x: number, y: number)`
@@ -137,7 +137,7 @@ await window.WindowAPI.setSize(800, 600);
 **Usage**:
 
 ```javascript
-await window.WindowAPI.setPosition(100, 100);
+await window.pyloid.WindowAPI.setPosition(100, 100);
 ```
 
 #### 12. `setFrame(frame: boolean)`
@@ -150,7 +150,7 @@ await window.WindowAPI.setPosition(100, 100);
 **Usage**:
 
 ```javascript
-await window.WindowAPI.setFrame(true);
+await window.pyloid.WindowAPI.setFrame(true);
 ```
 
 #### 13. `setContextMenu(contextMenu: boolean)`
@@ -163,7 +163,7 @@ await window.WindowAPI.setFrame(true);
 **Usage**:
 
 ```javascript
-await window.WindowAPI.setContextMenu(false);
+await window.pyloid.WindowAPI.setContextMenu(false);
 ```
 
 #### 14. `setDevTools(enable: boolean)`
@@ -179,10 +179,10 @@ await window.WindowAPI.setContextMenu(false);
 
 ```javascript
 // Enable developer tools and allow opening with F12
-await window.WindowAPI.setDevTools(true);
+await window.pyloid.WindowAPI.setDevTools(true);
 
 // Disable developer tools and prevent opening with F12
-await window.WindowAPI.setDevTools(false);
+await window.pyloid.WindowAPI.setDevTools(false);
 ```
 
 #### 15. `capture(savePath: string)`
@@ -195,7 +195,7 @@ await window.WindowAPI.setDevTools(false);
 **Usage**:
 
 ```javascript
-const filePath = await window.WindowAPI.capture('/path/to/save/screenshot.png');
+const filePath = await window.pyloid.WindowAPI.capture('/path/to/save/screenshot.png');
 if (filePath) {
   console.log(`Screenshot saved to ${filePath}`);
 } else {

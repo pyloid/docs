@@ -1,6 +1,6 @@
 # Table of contents
 
-* [💎 What is pylon-app?](README.md)
+* [💎 What is Pyloid?](README.md)
 
 ## Getting Started
 
@@ -10,9 +10,9 @@
 ## API
 
 * [Python (Backend)](api/python-backend/README.md)
-  * [PylonApp](api/python-backend/pylonapp.md)
+  * [Pyloid](api/python-backend/pyloid.md)
   * [BrowserWindow](api/python-backend/browserwindow.md)
-  * [PylonAPI](api/python-backend/pylonapi.md)
+  * [PyloidAPI](api/python-backend/pyloidapi.md)
   * [Monitor](api/python-backend/monitor.md)
   * [TrayEvent](api/python-backend/trayevent.md)
   * [Utility Functions](api/python-backend/utils.md)
@@ -28,8 +28,9 @@
 * [Notification](guides/notification.md)
 * [Tray](guides/tray.md)
 * [Clipboard](guides/clipboard.md)
+* [Devtools](guides/devtools-settings.md)
 * [Window Customization](guides/window-customization.md)
 * [Autostart](guides/autostart.md)
 * [Build Guide](guides/build-guide/README.md)
-  * [Pylon-React-Vite](guides/build-guide/pylon-react.md)
-  * [Pylon-HTML-Boilerplate](guides/build-guide/pylon-html.md)
+  * [Pyloid-React-Vite](guides/build-guide/pyloid-react.md)
+  * [Pyloid-HTML-Boilerplate](guides/build-guide/pyloid-html.md)

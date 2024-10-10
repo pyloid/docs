@@ -2,9 +2,9 @@
 icon: file-code
 ---
 
-# Pylon-React
+# Pyloid-Html
 
-Pylon-React-Boilerplate is a template for projects combining a React frontend with a Python backend. Here, we'll explain in detail the project setup, development, and build process.
+Pyloid-Html-Boilerplate is a template for projects combining a HTML/CSS/JS frontend with a Python backend. Here, we'll explain in detail the project setup, development, and build process.
 
 ## 1. Project Initialization
 
@@ -17,7 +17,7 @@ npm run init
 This command performs the following tasks:
 
 1. Install npm packages
-2. Create a Python virtual environment (venv-pylon)
+2. Create a Python virtual environment (venv-pyloid)
 3. Install Python dependencies (based on requirements.txt)
 
 The appropriate script is executed depending on the operating system.
@@ -33,7 +33,7 @@ npm run dev
 This command performs the following tasks:
 
 1. Run the React frontend development server using Vite
-2. Run the Python backend server (src-pylon/main.py)
+2. Run the Python backend server (src-pyloid/main.py)
 
 The concurrently package is used to run both processes in parallel.
 
@@ -53,7 +53,7 @@ This command performs the following tasks:
 
 ### Backend Packaging with PyInstaller
 
-PyInstaller is a tool that converts Python applications into standalone executables. Pylon Boilerplate uses different spec files for each operating system:
+PyInstaller is a tool that converts Python applications into standalone executables. Pyloid Boilerplate uses different spec files for each operating system:
 
 - Windows: `build-windows.spec`
 - Linux: `build-linux.spec`

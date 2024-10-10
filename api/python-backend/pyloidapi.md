@@ -1,10 +1,10 @@
-# PylonAPI
+# PyloidAPI
 
-The `PylonAPI` class is implemented by inheriting from QObject.
+The `PyloidAPI` class is implemented by inheriting from QObject.
 
 ## Used with Bridge
 
-The `PylonAPI` class is used in conjunction with the `Bridge` decorator to enable interaction between JavaScript and Python. The `Bridge` decorator allows Python methods to be called from JavaScript.
+The `PyloidAPI` class is used in conjunction with the `Bridge` decorator to enable interaction between JavaScript and Python. The `Bridge` decorator allows Python methods to be called from JavaScript.
 
 ### `Bridge` Decorator
 
@@ -14,9 +14,9 @@ The `Bridge` decorator can take the following parameters:
 
 ## Usage Example
 ```python
-from PylonAPI import PylonAPI, Bridge
+from PyloidAPI import PyloidAPI, Bridge
 
-class CustomAPI(PylonAPI):
+class CustomAPI(PyloidAPI):
     @Bridge(str, int, result=str)
     def echo(self, message, number):
         print(f"Message: {message}-{number}")
@@ -29,11 +29,7 @@ class CustomAPI(PylonAPI):
     @Bridge(result=str)
     def create_window(self):
         window = app.create_window(
-            title="Pylon Browser2",
-            frame=True,
-            context_menu=False,
-            js_apis=[CustomAPI()],
-            dev_tools=True
+            title="Pyloid Browser2",
         )
 
         window.set_size(800, 600)
@@ -45,8 +41,7 @@ class CustomAPI(PylonAPI):
         return window.id
 
 window = app.create_window(
-    title="Pylon Browser1",
-    frame=True,
+    title="Pyloid Browser1",
     js_apis=[CustomAPI()],
     dev_tools=True
 )

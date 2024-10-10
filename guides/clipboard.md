@@ -1,6 +1,6 @@
 # Clipboard
 
-PylonApp provides easy-to-use clipboard functionality. You can copy text and images to the clipboard or retrieve them from the clipboard.
+Pyloid provides easy-to-use clipboard functionality. You can copy text and images to the clipboard or retrieve them from the clipboard.
 
 ## Text Operations
 

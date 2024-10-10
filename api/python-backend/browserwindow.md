@@ -2,7 +2,7 @@
 
 ## Overview
 
-The BrowserWindow class is designed to manage browser windows within a Pylon application. It extends PySide6's QMainWindow to provide additional functionality for creating and managing browser windows.
+The BrowserWindow class is designed to manage browser windows within a Pyloid application. It extends PySide6's QMainWindow to provide additional functionality for creating and managing browser windows.
 
 ## Constructor
 
@@ -13,7 +13,7 @@ def __init__(self, app, title: str = "pylon app", width: int = 800, height: int 
 Initializes a BrowserWindow object.
 
 - **Parameters**:
-  - `app`: Pylon application instance
+  - `app`: Pyloid instance
   - `title` (str): Window title (default: "pylon app")
   - `width` (int): Window width (default: 800)
   - `height` (int): Window height (default: 600)
@@ -22,7 +22,7 @@ Initializes a BrowserWindow object.
   - `frame` (bool): Whether to show window frame (default: True)
   - `context_menu` (bool): Whether to enable context menu (default: False)
   - `dev_tools` (bool): Whether to enable developer tools (default: False)
-  - `js_apis` (List[PylonAPI]): List of JavaScript APIs to add (default: [])
+  - `js_apis` (List[PyloidAPI]): List of JavaScript APIs to add (default: [])
 
 ## Methods
 

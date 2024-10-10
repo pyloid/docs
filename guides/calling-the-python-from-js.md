@@ -2,11 +2,11 @@
 
 ## Introduction to PylonAPI
 
-The `PylonAPI` class is a key component that enables interaction between JavaScript and Python.
+The `PyloidAPI` class is a key component that enables interaction between JavaScript and Python.
 
 ## Using the Bridge Decorator
 
-The `PylonAPI` class is used in conjunction with the `Bridge` decorator to allow Python methods to be called from JavaScript.
+The `PyloidAPI` class is used in conjunction with the `Bridge` decorator to allow Python methods to be called from JavaScript.
 
 ### Bridge Decorator Parameters
 
@@ -20,9 +20,9 @@ The `Bridge` decorator can use the following parameters:
 Here's an example code using `PylonAPI` and the `Bridge` decorator:
 
 ```python
-from PylonAPI import PylonAPI, Bridge
+from pyloid import PyloidAPI, Bridge
 
-class CustomAPI(PylonAPI):
+class CustomAPI(PyloidAPI):
     @Bridge(str, int, result=str)
     def echo(self, message, number):
         print(f"Message: {message}-{number}")
@@ -35,11 +35,9 @@ class CustomAPI(PylonAPI):
     @Bridge(result=str)
     def create_window(self):
         window = app.create_window(
-            title="Pylon Browser2",
+            title="Pyloid Browser2",
             frame=True,
             context_menu=False,
-            js_apis=[CustomAPI()],
-            dev_tools=True
         )
 
         window.set_size(800, 600)
@@ -52,7 +50,7 @@ class CustomAPI(PylonAPI):
 
 # Create main window
 window = app.create_window(
-    title="Pylon Browser1",
+    title="Pyloid Browser1",
     frame=True,
     js_apis=[CustomAPI()],
     dev_tools=True
@@ -71,7 +69,7 @@ app.run()
 
 ### Code Explanation
 
-1. The `CustomAPI` class is defined by inheriting from `PylonAPI`.
+1. The `CustomAPI` class is defined by inheriting from `PyloidAPI`.
 
 2. `echo` method:
 
@@ -89,7 +87,7 @@ app.run()
 5. Main window creation:
    - Passes an instance of `CustomAPI` as the `js_apis` parameter to allow access to Python methods from JavaScript.
 
-This example demonstrates how to call Python methods from JavaScript and how to use `PylonAPI` to create and manage windows.
+This example demonstrates how to call Python methods from JavaScript and how to use `PyloidAPI` to create and manage windows.
 
 ## Calling Python Methods from JavaScript
 
@@ -99,23 +97,23 @@ Here's how to call Python methods defined in JavaScript:
 // CustomAPI method usage examples
 
 // Using the echo method
-pylon.CustomAPI.echo('Hello', 42).then((result) => {
+pyloid.CustomAPI.echo('Hello', 42).then((result) => {
   console.log(result); // Outputs "Message received in Python: Hello-42"
 });
 
 // Using the getAppVersion method
-document.addEventListener('pylonReady', function () {
-  pylon.CustomAPI.getAppVersion().then((version) => {
+document.addEventListener('pyloidReady', function () {
+  pyloid.CustomAPI.getAppVersion().then((version) => {
     console.log('App version:', version); // Outputs "App version: 1.0.0"
   });
 
   // Example using async/await syntax
   async function useCustomAPI() {
     try {
-      const echoResult = await pylon.CustomAPI.echo('Test', 100);
+      const echoResult = await pyloid.CustomAPI.echo('Test', 100);
       console.log(echoResult);
 
-      const appVersion = await pylon.CustomAPI.getAppVersion();
+      const appVersion = await pyloid.CustomAPI.getAppVersion();
       console.log('Current app version:', appVersion);
     } catch (error) {
       console.error('Error occurred while calling API:', error);
@@ -127,7 +125,7 @@ document.addEventListener('pylonReady', function () {
   // Binding button click event
   document.getElementById('myButton').addEventListener('click', function () {
     // Using the create_window method
-    pylon.CustomAPI.create_window().then((windowId) => {
+    pyloid.CustomAPI.create_window().then((windowId) => {
       console.log('New window ID:', windowId); // Outputs "New window ID: [created window ID]"
     });
   });
@@ -136,20 +134,20 @@ document.addEventListener('pylonReady', function () {
 
 ### Code Explanation
 
-1. `pylonReady` event:
+1. `pyloidReady` event:
 
-   - Uses `document.addEventListener('pylonReady', function () {...})` to define code to be executed when Pylon is ready.
+   - Uses `document.addEventListener('pyloidReady', function () {...})` to define code to be executed when Pyloid is ready.
    - Python methods can be called within this event handler.
-   - **Boilerplates like React execute JavaScript itself after `pylonReady`, so there's no need to add a separate `pylonReady` event listener. Therefore, when using a boilerplate, you can call Python methods directly.**
+   - **Boilerplates like React execute JavaScript itself after `pyloidReady`, so there's no need to add a separate `pyloidReady` event listener. Therefore, when using a boilerplate, you can call Python methods directly.**
 
 2. Calling the `echo` method:
 
-   - Uses `pylon.CustomAPI.echo()` to call the `echo` method in Python.
+   - Uses `pyloid.CustomAPI.echo()` to call the `echo` method in Python.
    - The result is returned as a Promise and handled using `then()`.
 
 3. Calling the `getAppVersion` method:
 
-   - Calls `pylon.CustomAPI.getAppVersion()` to get the app version.
+   - Calls `pyloid.CustomAPI.getAppVersion()` to get the app version.
 
 4. Using async/await:
 

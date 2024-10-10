@@ -2,13 +2,13 @@
 
 ## EventAPI (JavaScript) Documentation
 
-`EventAPI` provides methods for handling events in JavaScript frontend that originate from Python in Pylon applications. This API allows you to receive and manage events sent from Python in the frontend.
+`EventAPI` provides methods for handling events in JavaScript frontend that originate from Python in Pyloid applications. This API allows you to receive and manage events sent from Python in the frontend.
 
-To execute Python from JavaScript, you need to use `PylonAPI`. For more details, refer to the [PylonAPI documentation](../python-backend/pylonapi.md).
+To execute Python from JavaScript, you need to use `PyloidAPI`. For more details, refer to the [PyloidAPI documentation](../python-backend/pyloidapi.md).
 
 ### Usage
 
-Methods of `EventAPI` can be called using `window.pylon.EventAPI.<methodName>()`.
+Methods of `EventAPI` can be called using `window.pyloid.EventAPI.<methodName>()`.
 
 ***
 
@@ -23,7 +23,7 @@ Methods of `EventAPI` can be called using `window.pylon.EventAPI.<methodName>()`
 **Usage example**:
 
 ```javascript
-window.pylon.EventAPI.listen('pythonEvent', function (eventData) {
+window.pyloid.EventAPI.listen('pythonEvent', function (eventData) {
   console.log('Received event from Python:', eventData);
 });
 ```
@@ -38,7 +38,7 @@ window.pylon.EventAPI.listen('pythonEvent', function (eventData) {
 **Usage example**:
 
 ```javascript
-window.pylon.EventAPI.unlisten('pythonEvent');
+window.pyloid.EventAPI.unlisten('pythonEvent');
 ```
 
 ***
@@ -73,18 +73,18 @@ Here's an example of using `EventAPI` to receive and handle events sent from Pyt
 
 ```javascript
 // Setting up Python event listeners
-window.pylon.EventAPI.listen('simpleEvent', function () {
+window.pyloid.EventAPI.listen('simpleEvent', function () {
   console.log('Received simple event from Python');
 });
 
-window.pylon.EventAPI.listen('userDataUpdate', function (userData) {
+window.pyloid.EventAPI.listen('userDataUpdate', function (userData) {
   console.log('Received user data update from Python:', userData);
 });
 
 // Later, to stop listening for events
 function cleanupEventListeners() {
-  window.pylon.EventAPI.unlisten('simpleEvent');
-  window.pylon.EventAPI.unlisten('userDataUpdate');
+  window.pyloid.EventAPI.unlisten('simpleEvent');
+  window.pyloid.EventAPI.unlisten('userDataUpdate');
 }
 ```
 

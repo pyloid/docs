@@ -7,8 +7,8 @@ This guide explains how to call JavaScript functions from Python code.
 First, we need to prepare the JavaScript code to receive events coming from Python.
 
 ```javascript
-document.addEventListener('pylonReady', function () {
-  window.pylon.EventAPI.listen('pythonEvent', function (data) {
+document.addEventListener('pyloidReady', function () {
+  window.pyloid.EventAPI.listen('pythonEvent', function (data) {
     console.log('Received event from Python:', data.message);
   });
 });
@@ -16,8 +16,8 @@ document.addEventListener('pylonReady', function () {
 
 This code does the following:
 
-1. Waits for the `pylonReady` event. This event occurs when the Pylon environment is fully loaded.
-2. Once the Pylon environment is ready, it starts listening for an event named 'pythonEvent' using the `window.pylon.EventAPI.listen` method.
+1. Waits for the `pyloidReady` event. This event occurs when the Pyloid environment is fully loaded.
+2. Once the Pyloid environment is ready, it starts listening for an event named 'pythonEvent' using the `window.pyloid.EventAPI.listen` method.
 3. When 'pythonEvent' occurs, it logs the `message` property of the passed data to the console.
 
 ## 2. Triggering Events from Python

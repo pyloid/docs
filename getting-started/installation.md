@@ -1,8 +1,8 @@
 # Installation
 
-## pylon-app Installation Guide
+## Pyloid Installation Guide
 
-To use pylon-app, make sure you have the required versions of Python and Node.js installed on your system. Follow the instructions below to set up your environment.
+To use pyloid, make sure you have the required versions of Python and Node.js installed on your system. Follow the instructions below to set up your environment.
 
 ### Prerequisites
 
