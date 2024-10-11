@@ -9,12 +9,14 @@ The `PyloidAPI` class is used in conjunction with the `Bridge` decorator to enab
 ### `Bridge` Decorator
 
 The `Bridge` decorator can take the following parameters:
+
 - `result`: Specifies the return type.
 - `args`: Specifies the argument types.
 
 ## Usage Example
+
 ```python
-from PyloidAPI import PyloidAPI, Bridge
+from Pyloid import PyloidAPI, Bridge
 
 class CustomAPI(PyloidAPI):
     @Bridge(str, int, result=str)
