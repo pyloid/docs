@@ -27,6 +27,8 @@
 - [Keyboard Shotcuts](guides/keyboard-shotcuts.md)
 - [Notification](guides/notification.md)
 - [Tray](guides/tray.md)
+- [Timer](guides/timer.md)
+- [File Watcher](guides/filewatcher.md)
 - [Clipboard](guides/clipboard.md)
 - [Devtools](guides/devtools-settings.md)
 - [Window Customization](guides/window-customization.md)
