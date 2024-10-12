@@ -15,4 +15,4 @@
 ```
 pip install pyloid
 ```
-Package URL: https://pypi.org/project/pyloid/
+Package URL: [pyloid package](https://pypi.org/project/pyloid/)
