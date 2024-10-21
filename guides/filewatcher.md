@@ -9,7 +9,7 @@ The File Watcher provides functionality to monitor changes in specific files or 
 To monitor changes in a specific file, use the following:
 
 {% tabs %}
-{% tab title="Snippet" %}
+{% tab title="Partial Code" %}
 
 ```python
 result = app.watch_file("path/file.txt")
@@ -52,7 +52,7 @@ app.run()
 To monitor changes in a specific directory, use the following:
 
 {% tabs %}
-{% tab title="Snippet" %}
+{% tab title="Partial Code" %}
 
 ```python
 result = app.watch_directory("/path/directory")
@@ -95,7 +95,7 @@ app.run()
 You can set a callback function to be executed when a file is changed:
 
 {% tabs %}
-{% tab title="Snippet" %}
+{% tab title="Partial Code" %}
 
 ```python
 def on_file_changed(path):
@@ -140,7 +140,7 @@ app.run()
 You can set a callback function to be executed when a directory is changed:
 
 {% tabs %}
-{% tab title="Snippet" %}
+{% tab title="Partial Code" %}
 
 ```python
 def on_directory_changed(path):
@@ -185,7 +185,7 @@ app.run()
 To stop watching a specific file or directory, use the following:
 
 {% tabs %}
-{% tab title="Snippet" %}
+{% tab title="Partial Code" %}
 
 ```python
 result = app.stop_watching("/path/to/file_or_directory")
@@ -229,7 +229,7 @@ app.run()
 To check all currently watched paths (files and directories), use the following:
 
 {% tabs %}
-{% tab title="Snippet" %}
+{% tab title="Partial Code" %}
 
 ```python
 watched_paths = app.get_watched_paths()
@@ -264,7 +264,7 @@ app.run()
 ### Get Only Watched Files
 
 {% tabs %}
-{% tab title="Snippet" %}
+{% tab title="Partial Code" %}
 
 ```python
 watched_files = app.get_watched_files()
@@ -299,7 +299,7 @@ app.run()
 ### Get Only Watched Directories
 
 {% tabs %}
-{% tab title="Snippet" %}
+{% tab title="Partial Code" %}
 
 ```python
 watched_directories = app.get_watched_directories()
@@ -334,7 +334,7 @@ app.run()
 ### Remove All Watched Paths
 
 {% tabs %}
-{% tab title="Snippet" %}
+{% tab title="Partial Code" %}
 
 ```python
 app.remove_all_watched_paths()
