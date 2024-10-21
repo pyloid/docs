@@ -7,19 +7,18 @@ Pyloid allows you to configure developer tools in two ways. You can specify them
 You can set the developer tools using the `dev_tools` parameter when creating a window. The default value for this parameter is `False`.
 
 {% tabs %}
-{% tab title="부분 코드" %}
+{% tab title="Partial Code" %}
 
 ```python
 window = app.create_window(
     title="Pylon Browser",
-    js_apis=[custom()],
     dev_tools=True  # Activate developer tools (default is False)
 )
 ```
 
 {% endtab %}
 
-{% tab title="전체 코드" %}
+{% tab title="Full Code" %}
 
 ```python
 from pyloid import Pyloid
@@ -27,7 +26,7 @@ from pyloid import Pyloid
 app = Pyloid(app_name="Pyloid-App", single_instance=True)
 
 window = app.create_window(
-    title="Pylon Browser",
+    title="Pyloid Browser",
     dev_tools=True  # Activate developer tools (default is False)
 )
 
@@ -46,14 +45,38 @@ This method is useful when you want to immediately set the state of the develope
 
 You can set the developer tools using the `set_dev_tools()` method after creating a window.
 
+{% tabs %}
+{% tab title="Partial Code" %}
+
 ```python
 window = app.create_window(
-    title="Pylon Browser",
-    js_apis=[custom()]
+    title="Pyloid Browser",
 )
 window.set_dev_tools(True)  # Activate developer tools
 ```
 
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+window.set_dev_tools(True)  # Activate developer tools
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
 This method is useful when you want to dynamically change the state of the developer tools based on conditions after creating the window.
 
 ## Accessing Developer Tools via F12 Key
@@ -64,19 +87,49 @@ Setting `dev_tools=True` allows users to open the developer tools by pressing th
 
 An example of setting developer tools differently for development and production environments:
 
+{% tabs %}
+{% tab title="Partial Code" %}
+
 ```python
 if is_production():
     window = app.create_window(
-        title="Pylon Browser-production",
-        js_apis=[custom()]
+        title="Pyloid Browser-production",
     )
     window.set_dev_tools(False)  # Deactivate developer tools in production environment
 else:
     window = app.create_window(
-        title="Pylon Browser-dev",
-        js_apis=[custom()],
+        title="Pyloid Browser-dev",
         dev_tools=True  # Activate developer tools in development environment
     )
 ```
+
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+if is_production():
+    window = app.create_window(
+        title="Pyloid Browser-production",
+    )
+    window.set_dev_tools(False)  # Deactivate developer tools in production environment
+else:
+    window = app.create_window(
+        title="Pyloid Browser-dev",
+        dev_tools=True  # Activate developer tools in development environment
+    )
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
 
 Both methods provide the same result, so you can choose the appropriate method based on your project requirements and code structure.
