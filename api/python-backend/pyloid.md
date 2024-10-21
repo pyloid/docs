@@ -6,17 +6,16 @@ PylonApp is an application class that extends PySide6's QApplication, providing 
 
 ```python
 class Pyloid(QApplication):
-    def __init__(self, app_name: str, single_instance: bool = True, icon_path: str = None, tray_icon_path: str = None):
+    def __init__(self, app_name: str, single_instance: bool = True):
         # ...
 ```
-**app_name** is used as the key name when auto-starting.
 
+**app_name** is used as the key name when auto-starting and single instance mode.
 
 ### Parameters
 
+- `app_name` (str): Application name(used as the key name when auto-starting and single instance mode)
 - `single_instance` (bool): Activate single instance mode. Default is True.
-- `icon_path` (str, optional): Application icon file path.
-- `tray_icon_path` (str, optional): System tray icon file path.
 
 ## Main Methods
 
