@@ -8,29 +8,94 @@ The File Watcher provides functionality to monitor changes in specific files or 
 
 To monitor changes in a specific file, use the following:
 
+{% tabs %}
+{% tab title="Snippet" %}
+
 ```python
-result = app.watch_file("/path/to/file.txt")
+result = app.watch_file("path/file.txt")
 if result:
     print("File watching started")
 else:
     print("Failed to start file watching")
 ```
 
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+result = app.watch_file("/path/file.txt")
+if result:
+    print("File watching started")
+else:
+    print("Failed to start file watching")
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
+
 ### Start Watching a Directory
 
 To monitor changes in a specific directory, use the following:
 
+{% tabs %}
+{% tab title="Snippet" %}
+
 ```python
-result = app.watch_directory("/path/to/directory")
+result = app.watch_directory("/path/directory")
 if result:
     print("Directory watching started")
 else:
     print("Failed to start directory watching")
 ```
 
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+result = app.watch_directory("/path/directory")
+if result:
+    print("Directory watching started")
+else:
+    print("Failed to start directory watching")
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
+
 ### Set File Change Callback
 
 You can set a callback function to be executed when a file is changed:
+
+{% tabs %}
+{% tab title="Snippet" %}
 
 ```python
 def on_file_changed(path):
@@ -39,9 +104,43 @@ def on_file_changed(path):
 app.set_file_change_callback(on_file_changed)
 ```
 
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+app.watch_file("/path/file.txt")
+
+# Define callback function
+def on_file_changed(path):
+    print(f"File has been changed: {path}")
+
+# Set callback function
+app.set_file_change_callback(on_file_changed)
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
+
 ### Set Directory Change Callback
 
 You can set a callback function to be executed when a directory is changed:
+
+{% tabs %}
+{% tab title="Snippet" %}
 
 ```python
 def on_directory_changed(path):
@@ -50,9 +149,43 @@ def on_directory_changed(path):
 app.set_directory_change_callback(on_directory_changed)
 ```
 
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+app.watch_directory("/path/directory")
+
+# Define callback function
+def on_directory_changed(path):
+    print(f"Directory has been changed: {path}")
+
+# Set callback function
+app.set_directory_change_callback(on_directory_changed)
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
+
 ### Stop Watching
 
 To stop watching a specific file or directory, use the following:
+
+{% tabs %}
+{% tab title="Snippet" %}
 
 ```python
 result = app.stop_watching("/path/to/file_or_directory")
@@ -62,35 +195,177 @@ else:
     print("Failed to stop watching")
 ```
 
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+
+result = app.stop_watching("/path/to/file_or_directory")
+if result:
+    print("Watching stopped successfully")
+else:
+    print("Failed to stop watching")
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
+
 ### Check Watched Paths
 
 To check all currently watched paths (files and directories), use the following:
+
+{% tabs %}
+{% tab title="Snippet" %}
 
 ```python
 watched_paths = app.get_watched_paths()
 print("All watched paths:", watched_paths)
 ```
 
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+watched_paths = app.get_watched_paths()
+print("All watched paths:", watched_paths)
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
+
 ### Get Only Watched Files
+
+{% tabs %}
+{% tab title="Snippet" %}
 
 ```python
 watched_files = app.get_watched_files()
 print("Watched files:", watched_files)
 ```
 
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+watched_files = app.get_watched_files()
+print("Watched files:", watched_files)
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
+
 ### Get Only Watched Directories
+
+{% tabs %}
+{% tab title="Snippet" %}
 
 ```python
 watched_directories = app.get_watched_directories()
 print("Watched directories:", watched_directories)
 ```
 
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+watched_directories = app.get_watched_directories()
+print("Watched directories:", watched_directories)
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
+
 ### Remove All Watched Paths
+
+{% tabs %}
+{% tab title="Snippet" %}
 
 ```python
 app.remove_all_watched_paths()
 print("All watched paths have been removed.")
 ```
+
+{% endtab %}
+
+{% tab title="Full Code" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pyloid Browser",
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+# Remove all watched paths
+app.remove_all_watched_paths()
+print("All watched paths have been removed.")
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Usage Example
 
@@ -98,8 +373,14 @@ Here's a comprehensive example of using the File Watcher:
 
 ```python
 # Start watching file and directory
-app.watch_file("/path/to/file.txt")
-app.watch_directory("/path/to/directory")
+app.watch_file("/path/to/file1.txt")
+app.watch_file("/path/to/file2.txt")
+app.watch_file("/path/to/file3.txt")
+app.watch_file("/path/to/file4.txt")
+app.watch_directory("/path/to/directory1")
+app.watch_directory("/path/to/directory2")
+app.watch_directory("/path/to/directory3")
+app.watch_directory("/path/to/directory4")
 
 # Define callback functions
 def on_file_changed(path):
@@ -118,7 +399,14 @@ print("Watched files:", app.get_watched_files())
 print("Watched directories:", app.get_watched_directories())
 
 # Stop watching a specific path
-app.stop_watching("/path/to/file.txt")
+app.stop_watching("/path/to/file1.txt")
+app.stop_watching("/path/to/file2.txt")
+app.stop_watching("/path/to/file3.txt")
+app.stop_watching("/path/to/file4.txt")
+app.stop_watching("/path/to/directory1")
+app.stop_watching("/path/to/directory2")
+app.stop_watching("/path/to/directory3")
+app.stop_watching("/path/to/directory4")
 
 # Remove all watched paths
 app.remove_all_watched_paths()
