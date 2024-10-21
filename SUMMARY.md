@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-- [Installation](getting-started/installation.md)
+- [Prerequisites](getting-started/prerequisites.md)
 - [Creating a Project](getting-started/creating-a-project.md)
 
 ## API

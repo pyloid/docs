@@ -6,6 +6,10 @@ icon: file-code
 
 Pyloid-Html-Boilerplate is a template for projects combining a HTML/CSS/JS frontend with a Python backend. Here, we'll explain in detail the project setup, development, and build process.
 
+### Prerequisites
+
+- [Prerequisites](/getting-started/prerequisites.md)
+
 ## 1. Project Initialization
 
 Before starting the project, you need to install all necessary dependencies.
