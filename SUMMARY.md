@@ -33,6 +33,7 @@
 - [Devtools](guides/devtools-settings.md)
 - [Window Customization](guides/window-customization.md)
 - [Autostart](guides/autostart.md)
+- [Production Utils](guides/production-utils.md)
 - [Build Guide](guides/build-guide/README.md)
   - [Pyloid-React-Vite](guides/build-guide/pyloid-react.md)
   - [Pyloid-HTML-Boilerplate](guides/build-guide/pyloid-html.md)
