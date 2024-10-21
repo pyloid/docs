@@ -6,6 +6,9 @@ Pyloid allows you to configure developer tools in two ways. You can specify them
 
 You can set the developer tools using the `dev_tools` parameter when creating a window. The default value for this parameter is `False`.
 
+{% tabs %}
+{% tab title="부분 코드" %}
+
 ```python
 window = app.create_window(
     title="Pylon Browser",
@@ -13,6 +16,29 @@ window = app.create_window(
     dev_tools=True  # Activate developer tools (default is False)
 )
 ```
+
+{% endtab %}
+
+{% tab title="전체 코드" %}
+
+```python
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App", single_instance=True)
+
+window = app.create_window(
+    title="Pylon Browser",
+    dev_tools=True  # Activate developer tools (default is False)
+)
+
+window.load_url("https://www.example.com")
+window.show_and_focus()
+
+app.run()
+```
+
+{% endtab %}
+{% endtabs %}
 
 This method is useful when you want to immediately set the state of the developer tools at the point of window creation.
 
