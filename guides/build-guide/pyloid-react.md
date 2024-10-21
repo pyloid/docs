@@ -84,4 +84,4 @@ You can modify the build process to meet your project's specific requirements:
 - Cross-platform Builds: You need to perform the build for each platform on the respective operating system.
 - Environment Variables: You may need to set environment variables appropriately depending on the production environment.
 
-This guide should help you understand the process of initializing, developing, and building a project using the Pylon Boilerplate. Backend packaging with PyInstaller simplifies deployment and facilitates dependency management.
+This guide should help you understand the process of initializing, developing, and building a project using the Pyloid Boilerplate. Backend packaging with PyInstaller simplifies deployment and facilitates dependency management.
