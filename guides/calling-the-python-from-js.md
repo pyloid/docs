@@ -17,8 +17,6 @@ The `Bridge` decorator can use the following parameters:
 
 ## Setting up JavaScript API in Python
 
-Here's an example code using `PylonAPI` and the `Bridge` decorator:
-
 {% tabs %}
 {% tab title="main.py" %}
 
