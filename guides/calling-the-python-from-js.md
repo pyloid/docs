@@ -56,21 +56,16 @@ app.run()
     <title>Pyloid</title>
     <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
     <script>
-      document.addEventListener('pyloidReady', function () {
+      document.addEventListener('pyloidReady', async function () {
         console.log('Pyloid is ready');
 
-        document
-          .getElementById('button')
-          .addEventListener('click', async function () {
-            let result = await window.pyloid.CustomAPI.echo('Hello, Pyloid!');
-            document.querySelector('p').textContent = result;
-          });
+        let result = await window.pyloid.CustomAPI.echo('Hello, Pyloid!');
+        document.querySelector('p').textContent = result;
       });
     </script>
   </head>
   <body>
     <h1>Hello World!</h1>
-    <button id="button">Click me</button>
     <p>None</p>
   </body>
 </html>
