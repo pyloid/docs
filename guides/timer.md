@@ -234,7 +234,7 @@ app = Pyloid(app_name="Pyloid-App")
 timer_manager = PyloidTimer()
 
 # Start a timer
-timer_id = timer_manager.start_periodic_timer(2000, lambda: print("Hello!"))
+timer_id = timer_manager.start_periodic_timer(1000, lambda: print("Hello!"))
 
 # Change the timer interval to 3 seconds
 timer_manager.set_interval(timer_id, 3000)
