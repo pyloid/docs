@@ -23,6 +23,9 @@ With Pyloid, you can leverage the full power of Python in your desktop applicati
 * **Cross-Platform Support**: Runs on various operating systems, including Windows, macOS, and Linux, Raspberry Pi OS.
 * **Integration with Various Frontend Libraries**: Supports integration with frontend frameworks like HTML/CSS/JS and React.
 * **Window Customization**: Customize window title bar and draggable region.
+- **Direct Utilization of PySide6 Features** 🛠️: Leverage almost all features of PySide6 to customize and extend the Pyloid API, offering limitless possibilities.
+- **Detailed Numpy-style Docstrings** 📚: Provide detailed and clear Numpy-style docstrings that greatly enhance the development experience, making it easy to understand and apply the API.
+
 
 ### Quick Start Templates (🛠️ More frontend templates coming soon)
 
