@@ -1,19 +1,19 @@
-# 데스크탑 모니터
+# Desktop Monitor
 
-## 개요
+## Overview
 
-`app.get_primary_monitor()` 또는 `app.get_all_monitors()` 메서드를 사용하여 모니터 객체를 얻을 수 있습니다. 이 모니터 객체를 통해 다양한 기능을 수행할 수 있으며, `Monitor` 객체의 여러 메서드를 활용하여 모니터의 속성 및 상태를 조회하거나 변경할 수 있습니다.
+You can obtain monitor objects using the `app.get_primary_monitor()` or `app.get_all_monitors()` methods. Through these monitor objects, you can perform various functions and utilize several methods of the `Monitor` object to query or modify the properties and states of the monitor.
 
-## 메서드
+## Methods
 
 #### `capture(save_path: str, x: Optional[int] = None, y: Optional[int] = None, width: Optional[int] = None, height: Optional[int] = None)`
 
-- **설명**: 전체 데스크탑 화면을 캡처합니다.
-- **매개변수**:
-  - `save_path` (str): 캡처된 이미지를 저장할 경로.
-  - `x`, `y`, `width`, `height` (int, optional): 캡처할 영역의 좌표 및 크기.
-- **반환값**: 저장된 이미지의 경로를 반환합니다. 오류 발생 시 `None`을 반환합니다.
-- **예제**:
+- **Description**: Captures the entire desktop screen.
+- **Parameters**:
+  - `save_path` (str): Path to save the captured image.
+  - `x`, `y`, `width`, `height` (int, optional): Coordinates and size of the area to capture.
+- **Return Value**: Returns the path of the saved image. Returns `None` if an error occurs.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -23,9 +23,9 @@
 
 #### `info() -> dict[str, Any]`
 
-- **설명**: 모니터에 대한 모든 정보를 반환합니다.
-- **반환값**: 모니터 모든 정보가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns all information about the monitor.
+- **Return Value**: A dictionary containing all monitor information.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -35,9 +35,9 @@
 
 #### `is_primary() -> bool`
 
-- **설명**: 모니터가 기본 모니터인지 확인합니다.
-- **반환값**: 기본 모니터이면 `True`, 아니면 `False`.
-- **예제**:
+- **Description**: Checks if the monitor is the primary monitor.
+- **Return Value**: `True` if it's the primary monitor, `False` otherwise.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_all_monitors()[1]
@@ -47,9 +47,9 @@
 
 #### `size() -> dict[str, int]`
 
-- **설명**: 모니터의 크기를 반환합니다.
-- **반환값**: 모니터의 너비와 높이가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns the size of the monitor.
+- **Return Value**: A dictionary containing the width and height of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -59,9 +59,9 @@
 
 #### `geometry() -> dict[str, int]`
 
-- **설명**: 모니터의 x, y, width, height 정보를 반환합니다.
-- **반환값**: 모니터의 x, y, width, height 정보가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns the x, y, width, height information of the monitor.
+- **Return Value**: A dictionary containing the x, y, width, height information of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -71,9 +71,9 @@
 
 #### `available_geometry() -> dict[str, int]`
 
-- **설명**: 모니터의 사용 가능한 x, y, width, height 정보를 반환합니다.
-- **반환값**: 시스템 UI 요소를 제외한 모니터의 x, y, width, height 정보가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns the available x, y, width, height information of the monitor.
+- **Return Value**: A dictionary containing the x, y, width, height information of the monitor, excluding system UI elements.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -83,9 +83,9 @@
 
 #### `available_size() -> dict[str, int]`
 
-- **설명**: 모니터의 사용 가능한 크기를 반환합니다.
-- **반환값**: 시스템 UI 요소를 제외한 모니터의 너비와 높이가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns the available size of the monitor.
+- **Return Value**: A dictionary containing the width and height of the monitor, excluding system UI elements.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -95,9 +95,9 @@
 
 #### `virtual_geometry() -> dict[str, int]`
 
-- **설명**: 모니터의 가상 x, y, width, height 정보를 반환합니다.
-- **반환값**: 다중 모니터 설정에서 모든 모니터의 결합된 x, y, width, height 정보가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns the virtual x, y, width, height information of the monitor.
+- **Return Value**: A dictionary containing the combined x, y, width, height information of all monitors in a multi-monitor setup.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -107,9 +107,9 @@
 
 #### `virtual_size() -> dict[str, int]`
 
-- **설명**: 모니터의 가상 크기를 반환합니다.
-- **반환값**: 다중 모니터 설정에서 모든 모니터의 결합된 너비와 높이가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns the virtual size of the monitor.
+- **Return Value**: A dictionary containing the combined width and height of all monitors in a multi-monitor setup.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -119,9 +119,9 @@
 
 #### `available_virtual_geometry() -> dict[str, int]`
 
-- **설명**: 모니터의 사용 가능한 가상 x, y, width, height 정보를 반환합니다.
-- **반환값**: 시스템 UI 요소를 제외한 가상 x, y, width, height 정보가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns the available virtual x, y, width, height information of the monitor.
+- **Return Value**: A dictionary containing the virtual x, y, width, height information, excluding system UI elements.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -131,9 +131,9 @@
 
 #### `available_virtual_size() -> dict[str, int]`
 
-- **설명**: 모니터의 사용 가능한 가상 크기를 반환합니다.
-- **반환값**: 시스템 UI 요소를 제외한 가상 크기가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns the available virtual size of the monitor.
+- **Return Value**: A dictionary containing the virtual size, excluding system UI elements.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -143,9 +143,9 @@
 
 #### `physical_size() -> dict[str, float]`
 
-- **설명**: 모니터의 물리적 크기를 반환합니다.
-- **반환값**: 모니터의 실제 물리적 너비와 높이가 담긴 딕셔너리.
-- **예제**:
+- **Description**: Returns the physical size of the monitor.
+- **Return Value**: A dictionary containing the actual physical width and height of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -155,9 +155,9 @@
 
 #### `depth() -> int`
 
-- **설명**: 모니터의 색상 깊이를 반환합니다.
-- **반환값**: 모니터의 색상 깊이.
-- **예제**:
+- **Description**: Returns the color depth of the monitor.
+- **Return Value**: The color depth of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -167,9 +167,9 @@
 
 #### `device_pixel_ratio() -> float`
 
-- **설명**: 모니터의 장치 픽셀 비율을 반환합니다.
-- **반환값**: 모니터의 장치 픽셀 비율.
-- **예제**:
+- **Description**: Returns the device pixel ratio of the monitor.
+- **Return Value**: The device pixel ratio of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -179,9 +179,9 @@
 
 #### `logical_dots_per_inch() -> float`
 
-- **설명**: 모니터의 논리적 DPI를 반환합니다.
-- **반환값**: 모니터의 논리적 DPI.
-- **예제**:
+- **Description**: Returns the logical DPI of the monitor.
+- **Return Value**: The logical DPI of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -191,9 +191,9 @@
 
 #### `logical_dots_per_inch_x() -> float`
 
-- **설명**: 모니터의 X축 논리적 DPI를 반환합니다.
-- **반환값**: 모니터의 X축 논리적 DPI.
-- **예제**:
+- **Description**: Returns the logical DPI on the X-axis of the monitor.
+- **Return Value**: The logical DPI on the X-axis of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -203,9 +203,9 @@
 
 #### `logical_dots_per_inch_y() -> float`
 
-- **설명**: 모니터의 Y축 논리적 DPI를 반환합니다.
-- **반환값**: 모니터의 Y축 논리적 DPI.
-- **예제**:
+- **Description**: Returns the logical DPI on the Y-axis of the monitor.
+- **Return Value**: The logical DPI on the Y-axis of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -215,9 +215,9 @@
 
 #### `orientation() -> str`
 
-- **설명**: 모니터의 방향을 반환합니다.
-- **반환값**: 모니터의 방향.
-- **예제**:
+- **Description**: Returns the orientation of the monitor.
+- **Return Value**: The orientation of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -227,9 +227,9 @@
 
 #### `physical_dots_per_inch() -> float`
 
-- **설명**: 모니터의 물리적 DPI를 반환합니다.
-- **반환값**: 모니터의 물리적 DPI.
-- **예제**:
+- **Description**: Returns the physical DPI of the monitor.
+- **Return Value**: The physical DPI of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -239,9 +239,9 @@
 
 #### `physical_dots_per_inch_x() -> float`
 
-- **설명**: 모니터의 X축 물리적 DPI를 반환합니다.
-- **반환값**: 모니터의 X축 물리적 DPI.
-- **예제**:
+- **Description**: Returns the physical DPI on the X-axis of the monitor.
+- **Return Value**: The physical DPI on the X-axis of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -251,9 +251,9 @@
 
 #### `physical_dots_per_inch_y() -> float`
 
-- **설명**: 모니터의 Y축 물리적 DPI를 반환합니다.
-- **반환값**: 모니터의 Y축 물리적 DPI.
-- **예제**:
+- **Description**: Returns the physical DPI on the Y-axis of the monitor.
+- **Return Value**: The physical DPI on the Y-axis of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -263,9 +263,9 @@
 
 #### `refresh_rate() -> float`
 
-- **설명**: 모니터의 새로 고침 빈도를 반환합니다.
-- **반환값**: 모니터의 새로 고침 빈도.
-- **예제**:
+- **Description**: Returns the refresh rate of the monitor.
+- **Return Value**: The refresh rate of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -275,9 +275,9 @@
 
 #### `manufacturer() -> str`
 
-- **설명**: 모니터의 제조사를 반환합니다.
-- **반환값**: 모니터의 제조사.
-- **예제**:
+- **Description**: Returns the manufacturer of the monitor.
+- **Return Value**: The manufacturer of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -287,9 +287,9 @@
 
 #### `model() -> str`
 
-- **설명**: 모니터의 모델을 반환합니다.
-- **반환값**: 모니터의 모델.
-- **예제**:
+- **Description**: Returns the model of the monitor.
+- **Return Value**: The model of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -299,9 +299,9 @@
 
 #### `name() -> str`
 
-- **설명**: 모니터의 이름을 반환합니다.
-- **반환값**: 모니터의 이름.
-- **예제**:
+- **Description**: Returns the name of the monitor.
+- **Return Value**: The name of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -311,9 +311,9 @@
 
 #### `serial_number() -> str`
 
-- **설명**: 모니터의 일련 번호를 반환합니다.
-- **반환값**: 모니터의 일련 번호.
-- **예제**:
+- **Description**: Returns the serial number of the monitor.
+- **Return Value**: The serial number of the monitor.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   monitor = app.get_primary_monitor()
@@ -323,10 +323,10 @@
 
 #### `geometry_changed(callback: Callable)`
 
-- **설명**: 모니터의 기하학적 정보가 변경될 때 호출되는 콜백을 등록합니다.
-- **매개변수**:
-  - `callback` (Callable): 기하학적 정보 변경 시 호출될 함수.
-- **예제**:
+- **Description**: Registers a callback to be called when the monitor's geometry changes.
+- **Parameters**:
+  - `callback` (Callable): Function to be called when the geometry changes.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   def on_geometry_changed():
@@ -337,10 +337,10 @@
 
 #### `orientation_changed(callback: Callable)`
 
-- **설명**: 모니터의 방향이 변경될 때 호출되는 콜백을 등록합니다.
-- **매개변수**:
-  - `callback` (Callable): 방향 변경 시 호출될 함수.
-- **예제**:
+- **Description**: Registers a callback to be called when the monitor's orientation changes.
+- **Parameters**:
+  - `callback` (Callable): Function to be called when the orientation changes.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   def on_orientation_changed():
@@ -351,10 +351,10 @@
 
 #### `refresh_rate_changed(callback: Callable)`
 
-- **설명**: 모니터의 새로 고침 빈도가 변경될 때 호출되는 콜백을 등록합니다.
-- **매개변수**:
-  - `callback` (Callable): 새로 고침 빈도 변경 시 호출될 함수.
-- **예제**:
+- **Description**: Registers a callback to be called when the monitor's refresh rate changes.
+- **Parameters**:
+  - `callback` (Callable): Function to be called when the refresh rate changes.
+- **Example**:
   ```python
   app = Pyloid("Pyloid-App")
   def on_refresh_rate_changed():
@@ -363,4 +363,4 @@
   monitor.refresh_rate_changed(on_refresh_rate_changed)
   ```
 
-이 외에도 `Monitor` 클래스는 다양한 모니터 속성 조회 메서드를 제공합니다. 각 메서드는 모니터의 특정 속성을 반환하며, 사용 예제는 위와 유사합니다.
+The `Monitor` class provides various other methods for querying monitor properties. Each method returns a specific attribute of the monitor, and usage examples are similar to those shown above.
