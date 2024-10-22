@@ -279,10 +279,10 @@ Returns information for the primary monitor.
 
 ### Clipboard
 
-#### copy_to_clipboard
+#### set_clipboard_text
 
 ```python
-def copy_to_clipboard(self, text: str):
+def set_clipboard_text(self, text: str):
 ```
 
 Copies text to the clipboard.

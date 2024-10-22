@@ -7,7 +7,7 @@ Pyloid provides easy-to-use clipboard functionality. You can copy text and image
 ### Copying Text to Clipboard
 
 ```python
-app.copy_to_clipboard("Text to be copied")
+app.set_clipboard_text("Text to be copied")
 ```
 
 You can use this function to copy desired text to the clipboard.

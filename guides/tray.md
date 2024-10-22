@@ -7,7 +7,7 @@ Pyloid makes it easy to implement system tray functionality. This guide explains
 Use the `set_tray_icon` method to set the tray icon. This method can be called at any time to change the icon:
 
 ```python
-app.set_tray_icon("assets/icon.ico")
+app.set_tray_icon("icons/icon.ico")
 ```
 
 Note: This method can be called while the app is running, allowing you to change the icon dynamically based on different conditions.
@@ -19,10 +19,10 @@ You can apply animations to the tray icon. Use the `set_tray_icon_animation` met
 ```python
 app.set_tray_icon_animation(
     [
-        "assets/frame1.png",
-        "assets/frame2.png",
-        "assets/frame3.png",
-        "assets/frame4.png",
+        "icons/frame1.png",
+        "icons/frame2.png",
+        "icons/frame3.png",
+        "icons/frame4.png",
     ],
     interval=500,
 )

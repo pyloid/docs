@@ -13,7 +13,11 @@
 ## Usage Example
 
 ```python
-from Pyloid import Pyloid, TrayEvent
+from pyloid import Pyloid, TrayEvent
+
+app = Pyloid(app_name="Pyloid-App")
+
+app.set_tray_icon("icons/icon.ico")
 
 app.set_tray_actions(
     {
