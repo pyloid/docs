@@ -2,7 +2,7 @@
 
 ## Overview
 
-This document explains how to open a file dialog and select files or directories. This functionality is implemented using PyQt's `QFileDialog` class. This document covers three methods: `open_file_dialog`, `save_file_dialog`, and `select_directory_dialog`.
+This document explains how to open a file dialog and select files or directories. This functionality is implemented using PySide's `QFileDialog` class. This document covers three methods: `open_file_dialog`, `save_file_dialog`, and `select_directory_dialog`.
 
 ## Method Descriptions
 
