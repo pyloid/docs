@@ -16,8 +16,4 @@
 
 #### Custom Your Boilerplate 🔨
 
-```
-pip install pyloid
-```
-
-Package URL: [pyloid package](https://pypi.org/project/pyloid/)
+[Custom Your Boilerplate](/guides/custom-boilerpalte.md)

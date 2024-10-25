@@ -22,6 +22,7 @@
 
 ## Guides
 
+- [Custom Your Boilerplate](guides/custom-boilerpalte.md)
 - [Calling the Python from JS](guides/calling-the-python-from-js.md)
 - [Calling the JS from Python](guides/calling-the-js-from-python.md)
 - [Keyboard Shotcuts](guides/keyboard-shotcuts.md)
