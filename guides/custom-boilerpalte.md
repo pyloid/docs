@@ -17,30 +17,7 @@ npm create vite@latest
 
 ### 2. Modify the index.html file
 
-#### (1) Add QtWebChannel to index.html
-
-{% code title="index.html" lineNumbers=true %}
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Add QtWebChannel -->
-    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
-    <!---------------------->
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pyloid</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
-```
-{% endcode %}
-
-#### (2) Add Security Policy to index.html
+#### Add Security Policy to index.html (Optional)
 
 {% code title="index.html" %}
 ```html
@@ -52,7 +29,7 @@ npm create vite@latest
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pyloid</title>
-    <!-- Add security policy -->
+    <!-- Add security policy (Optional) -->
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' qrc://*; img-src 'self' data:; style-src 'self' 'unsafe-inline';"
