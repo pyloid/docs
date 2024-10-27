@@ -76,9 +76,6 @@ app.run()
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
-  </head>
   <body>
     <button id="openFile">Open File</button>
     <button id="showMessage">Show Message</button>
