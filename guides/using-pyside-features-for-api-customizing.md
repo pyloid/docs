@@ -54,7 +54,7 @@ class MessageAPI(PyloidAPI):
         return reply == QMessageBox.Yes
 ```
 
-## How to Use
+### How to Use
 
 1. Define custom API classes.
 2. Pass API instances when creating a Pyloid application.
@@ -97,7 +97,9 @@ app.run()
           );
         }
 
-        document.querySelector('#openFile').addEventListener('click', openFile);
+        document
+          .querySelector('#openFile')
+          .addEventListener('click', openFile);
         document
           .querySelector('#showMessage')
           .addEventListener('click', showMessage);
@@ -105,6 +107,22 @@ app.run()
     </script>
   </body>
 </html>
+```
+
+## Implementing Desired Functionality Directly Using QMainWindow
+
+You can obtain a PySide6 QMainWindow instance through the `get_QMainWindow()` method from the BrowserWindow instance created by the app.create_window() function. This allows you to implement desired functionality directly.
+
+```python
+from PySide6.QtCore import Qt
+from pyloid import Pyloid
+
+app = Pyloid(app_name="Pyloid-App")
+
+window = app.create_window("pyloid-window")
+qmain = window.get_QMainWindow() # return QMainWindow instance
+
+qmain.setWindowFlags(qmain.windowFlags() | Qt.WindowStaysOnTopHint) # window stays on top
 ```
 
 ## Precautions
