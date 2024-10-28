@@ -23,6 +23,7 @@
 ## Guides
 
 - [Custom Your Boilerplate](guides/custom-boilerpalte.md)
+- [Load Webview](guides/load-webview.md)
 - [Calling the Python from JS](guides/calling-the-python-from-js.md)
 - [Calling the JS from Python](guides/calling-the-js-from-python.md)
 - [Keyboard Shotcuts](guides/keyboard-shotcuts.md)
@@ -31,12 +32,15 @@
 - [Timer](guides/timer.md)
 - [File Watcher](guides/filewatcher.md)
 - [Clipboard](guides/clipboard.md)
+- [Window Position](guides/position.md)
 - [Devtools](guides/devtools-settings.md)
 - [Window Customization](guides/window-customization.md)
 - [Autostart](guides/autostart.md)
 - [Production Utils](guides/production-utils.md)
 - [Desktop Monitor](guides/desktop-monitor.md)
 - [File Dialog](guides/file-dialog.md)
+- [Splash Screen](guides/splash-screen.md)
+- [Thread](guides/thread.md)
 - [⚡ Using PySide6 Features for API Customizing](guides/using-pyside-features-for-api-customizing.md)
 - [Build Guide](guides/build-guide/README.md)
   - [Pyloid-React-Vite](guides/build-guide/pyloid-react.md)
