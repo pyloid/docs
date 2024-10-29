@@ -45,6 +45,5 @@ Here, `window` is the `BrowserWindow` object created through the `create_window(
 
 - The JavaScript code must be loaded before the Python code runs. Otherwise, the event listener may not be set up, and it won't be able to receive events triggered from Python.
 - JSON format is used for data transmission, so complex data structures can also be passed.
-- For security reasons, care should be taken to only pass necessary data.
 
 Using this method enables two-way communication between Python and JavaScript, allowing for more dynamic and interactive applications.

@@ -54,7 +54,6 @@ app.run()
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pyloid</title>
-    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
     <script>
       document.addEventListener('pyloidReady', async function () {
         console.log('Pyloid is ready');
