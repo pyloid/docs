@@ -42,6 +42,7 @@
 - [Splash Screen](guides/splash-screen.md)
 - [Thread](guides/thread.md)
 - [⚡ Using PySide6 Features for API Customizing](guides/using-pyside-features-for-api-customizing.md)
+- [Themes](guides/themes.md)
 - [Build Guide](guides/build-guide/README.md)
   - [Pyloid-React-Vite](guides/build-guide/pyloid-react.md)
   - [Pyloid-HTML-Boilerplate](guides/build-guide/pyloid-html.md)
