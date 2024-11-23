@@ -1,12 +1,20 @@
-# Calling the Python from JS
+# Calling Python from JS
 
 ## Introduction to PylonAPI
 
-The `PyloidAPI` class is a key component that enables interaction between JavaScript and Python.
+The `PyloidAPI` class is a core component that enables interaction between JavaScript and Python.
+
+### PyloidAPI Properties
+
+The PyloidAPI class has the following important properties:
+
+- `window`: References the BrowserWindow instance.
+- `app`: References the Pyloid application instance.
+- `window_id`: Unique identifier for the browser window.
 
 ## Using the Bridge Decorator
 
-The `PyloidAPI` class is used in conjunction with the `Bridge` decorator to allow Python methods to be called from JavaScript.
+The `PyloidAPI` class is used with the `Bridge` decorator to make Python methods callable from JavaScript.
 
 ### Bridge Decorator Parameters
 
@@ -45,6 +53,7 @@ app.run()
 ```
 
 {% endtab %}
+
 {% tab title="index.html" %}
 
 ```html
@@ -64,7 +73,7 @@ app.run()
     </script>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>Hello!</h1>
     <p>None</p>
   </body>
 </html>
