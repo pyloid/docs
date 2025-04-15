@@ -1,410 +1,367 @@
-# Pyloid
+## Pyloid
 
-PylonApp is an application class that extends PySide6's QApplication, providing various features for desktop application development.
+Pyloid is a high-level desktop application framework built on top of PySide6. It simplifies window creation, system tray management, clipboard interaction, RPC communication, file watching, and more. All functions in Pyloid are thread-safe, meaning they can be safely executed from threads other than the main thread.
 
-## Initialization
+---
+
+### Initialization
 
 ```python
-class Pyloid(QApplication):
-    def __init__(self, app_name: str, single_instance: bool = True):
-        # ...
+from pyloid import Pyloid
+
+app = Pyloid(app_name="MyApp", single_instance=True)
 ```
 
-**app_name** is used as the key name when auto-starting and single instance mode.
+**Parameters**
 
-### Parameters
+- **app_name** : `str`
+    Name of the application (used for auto-start and single-instance logic).
+- **single_instance** : `bool`, optional, default: `True`
+    Whether to enforce a single running instance.
 
-- `app_name` (str): Application name(used as the key name when auto-starting and single instance mode)
-- `single_instance` (bool): Activate single instance mode. Default is True.
+**Returns**
 
-## Main Methods
+- `Pyloid`: The initialized application instance.
+
+---
 
 ### Window Management
 
-#### create_window
+#### `create_window`
 
 ```python
-def create_window(self, title: str = "pylon app", width: int = 800, height: int = 600, x: int = 200, y: int = 200, frame: bool = True, context_menu: bool = False, dev_tools: bool = False, js_apis: List[PylonAPI] = []) -> BrowserWindow:
+window = app.create_window(
+    title="Main Window",
+    width=1024,
+    height=768,
+    x=100,
+    y=100,
+    frame=True,
+    context_menu=True,
+    dev_tools=True,
+    rpc=rpc
+)
 ```
 
-Creates a new browser window.
+**Parameters**
 
-##### Parameters
+- **title** : `str`, optional, default: "pylon app"
+    Title of the window.
+- **width** : `int`, optional, default: `800`
+    Width of the window.
+- **height** : `int`, optional, default: `600`
+    Height of the window.
+- **x** : `int`, optional, default: `200`
+    X position of the window.
+- **y** : `int`, optional, default: `200`
+    Y position of the window.
+- **frame** : `bool`, optional, default: `True`
+    Whether the window has a visible frame.
+- **context_menu** : `bool`, optional, default: `False`
+    Whether to enable right-click context menu.
+- **dev_tools** : `bool`, optional, default: `False`
+    Whether to enable developer tools.
+- **rpc** : `Optional[PyloidRPC]`, optional
+    RPC instance for JavaScript communication.
 
-- `title` (str): Window title. Default is "pylon app".
-- `width` (int): Window width. Default is 800.
-- `height` (int): Window height. Default is 600.
-- `x` (int): Window x coordinate. Default is 200.
-- `y` (int): Window y coordinate. Default is 200.
-- `frame` (bool): Show window frame. Default is True.
-- `context_menu` (bool): Enable context menu. Default is False.
-- `dev_tools` (bool): Enable developer tools. Default is False.
-- `js_apis` (List[PylonAPI]): List of JavaScript APIs. Default is an empty list.
+**Returns**
 
-##### Returns
+- `BrowserWindow`: The created browser window.
 
-- `BrowserWindow`: Created browser window object.
-
-#### get_windows
+#### `get_windows`
 
 ```python
-def get_windows(self) -> List[BrowserWindow]:
+windows = app.get_windows()
+print(windows)
 ```
 
-Returns a list of all browser windows.
+**Returns**
 
-##### Returns
+- `Dict[str, BrowserWindow]`: Dictionary of all open windows.
 
-- `List[BrowserWindow]`: List of browser window objects.
-
-#### show_main_window
+#### `get_window_by_id`
 
 ```python
-def show_main_window(self):
+window = app.get_window_by_id("your-window-id")
 ```
 
-Shows the main window.
+**Parameters**
 
-#### focus_main_window
+- **window_id** : `str`
+    ID of the window to retrieve.
+
+**Returns**
+
+- `Optional[BrowserWindow]`: Window object or None.
+
+#### `show_main_window`, `focus_main_window`, `show_and_focus_main_window`, `close_all_windows`, `quit`
+
+Each of these methods takes no parameters and returns `None`.
+
+---
+
+### Tray System
+
+#### `set_tray_icon`
 
 ```python
-def focus_main_window(self):
+app.set_tray_icon("icon.png")
 ```
 
-Focuses the main window.
+**Parameters**
 
-#### show_and_focus_main_window
+- **tray_icon_path** : `str`
+    Path to the tray icon file.
+
+**Returns**
+
+- `bool`: True if successful.
+
+#### `set_tray_menu_items`
 
 ```python
-def show_and_focus_main_window(self):
+app.set_tray_menu_items([
+    {"label": "Open", "callback": lambda: app.show_main_window()},
+    {"label": "Quit", "callback": app.quit}
+])
 ```
 
-Shows and focuses the main window.
+**Parameters**
 
-#### close_all_windows
+- **tray_menu_items** : `List[Dict[str, Union[str, Callable]]]`
+    Menu items to add to the tray context menu.
+
+**Returns**
+
+- `bool`: True if successful.
+
+#### `show_notification`
 
 ```python
-def close_all_windows(self):
+app.show_notification("Hello", "This is a notification.")
 ```
 
-Closes all windows.
+**Parameters**
 
-#### quit
+- **title** : `str`
+- **message** : `str`
 
-```python
-def quit(self):
-```
+**Returns**
 
-Quits the application.
+- `bool`: True if successful.
 
-### Window Management by ID
-
-#### get_window_by_id
-
-```python
-def get_window_by_id(self, window_id: str) -> Optional[BrowserWindow]:
-```
-
-Searches for a window by ID.
-
-##### Parameters
-
-- `window_id` (str): ID of the window to search for.
-
-##### Returns
-
-- `Optional[BrowserWindow]`: Found window object or None.
-
-#### hide_window_by_id
-
-```python
-def hide_window_by_id(self, window_id: str):
-```
-
-Hides a window by ID.
-
-##### Parameters
-
-- `window_id` (str): ID of the window to hide.
-
-#### show_window_by_id
-
-```python
-def show_window_by_id(self, window_id: str):
-```
-
-Shows and focuses a window by ID.
-
-##### Parameters
-
-- `window_id` (str): ID of the window to show.
-
-#### close_window_by_id
-
-```python
-def close_window_by_id(self, window_id: str):
-```
-
-Closes a window by ID.
-
-##### Parameters
-
-- `window_id` (str): ID of the window to close.
-
-#### toggle_fullscreen_by_id
-
-```python
-def toggle_fullscreen_by_id(self, window_id: str):
-```
-
-Toggles fullscreen mode for a window by ID.
-
-##### Parameters
-
-- `window_id` (str): ID of the window to toggle fullscreen.
-
-#### minimize_window_by_id
-
-```python
-def minimize_window_by_id(self, window_id: str):
-```
-
-Minimizes a window by ID.
-
-##### Parameters
-
-- `window_id` (str): ID of the window to minimize.
-
-#### maximize_window_by_id
-
-```python
-def maximize_window_by_id(self, window_id: str):
-```
-
-Maximizes a window by ID.
-
-##### Parameters
-
-- `window_id` (str): ID of the window to maximize.
-
-#### unmaximize_window_by_id
-
-```python
-def unmaximize_window_by_id(self, window_id: str):
-```
-
-Unmaximizes a window by ID.
-
-##### Parameters
-
-- `window_id` (str): ID of the window to unmaximize.
-
-#### capture_window_by_id
-
-```python
-def capture_window_by_id(self, window_id: str, save_path: str) -> Optional[str]:
-```
-
-Captures a window by ID and saves the image.
-
-##### Parameters
-
-- `window_id` (str): ID of the window to capture.
-- `save_path` (str): Path to save the captured image.
-
-##### Returns
-
-- `Optional[str]`: Saved image file path or None (if failed).
-
-### System Tray
-
-#### run_tray
-
-```python
-def run_tray(self):
-```
-
-Sets up the system tray icon and menu.
-
-#### set_tray_actions
-
-```python
-def set_tray_actions(self, actions):
-```
-
-Sets the tray icon activation actions.
-
-##### Parameters
-
-- `actions` (Dict[QSystemTrayIcon.ActivationReason, Callable]): Dictionary of activation reasons and callback functions.
-
-#### show_notification
-
-```python
-def show_notification(self, title: str, message: str):
-```
-
-Displays a system tray notification.
-
-##### Parameters
-
-- `title` (str): Notification title.
-- `message` (str): Notification content.
-
-### Monitor Information
-
-#### get_all_monitors
-
-```python
-def get_all_monitors(self) -> List[Monitor]:
-```
-
-Returns information for all connected monitors.
-
-##### Returns
-
-- `List[Monitor]`: List of Monitor objects.
-
-#### get_primary_monitor
-
-```python
-def get_primary_monitor(self) -> Monitor:
-```
-
-Returns information for the primary monitor.
-
-##### Returns
-
-- `Monitor`: Monitor object for the primary monitor.
+---
 
 ### Clipboard
 
-#### set_clipboard_text
+#### `set_clipboard_text`
 
 ```python
-def set_clipboard_text(self, text: str):
+app.set_clipboard_text("Copied text")
 ```
 
-Copies text to the clipboard.
+**Parameters**
 
-##### Parameters
+- **text** : `str`
 
-- `text` (str): Text to copy.
+**Returns**
 
-#### get_clipboard_text
+- `None`
+
+#### `get_clipboard_text`
 
 ```python
-def get_clipboard_text(self) -> str:
+text = app.get_clipboard_text()
 ```
 
-Retrieves text from the clipboard.
+**Returns**
 
-##### Returns
+- `str`: Clipboard text.
 
-- `str`: Text from the clipboard.
-
-#### set_clipboard_image
+#### `set_clipboard_image`
 
 ```python
-def set_clipboard_image(self, image: Union[str, bytes, os.PathLike]):
+app.set_clipboard_image("image.png")
 ```
 
-Copies an image to the clipboard.
+**Parameters**
 
-##### Parameters
+- **image** : `Union[str, bytes, os.PathLike]`
+    Image file path or data.
 
-- `image` (Union[str, bytes, os.PathLike]): Image file path or byte data to copy.
+**Returns**
 
-#### get_clipboard_image
+- `None`
+
+#### `get_clipboard_image`
 
 ```python
-def get_clipboard_image(self) -> Optional[QImage]:
+img = app.get_clipboard_image()
 ```
 
-Retrieves an image from the clipboard.
+**Returns**
 
-##### Returns
+- `Optional[QImage]`: Clipboard image object.
 
-- `Optional[QImage]`: Image from the clipboard or None (if no image).
+---
 
 ### Autostart
 
-#### set_auto_start
+#### `set_auto_start`
 
 ```python
-def set_auto_start(self, enable: bool):
+app.set_auto_start(True)
 ```
 
-Sets the application to start automatically with the system.
+**Parameters**
 
-##### Parameters
+- **enable** : `bool`
 
-- `enable` (bool): True to enable auto-start, False to disable.
+**Returns**
 
-##### Notes
+- `Union[bool, None]`: True if enabled, False if disabled, None if unsupported.
 
-- `set_auto_start(True)` only works in production environment.
-- `set_auto_start(False)` works in both production and non-production environments.
-- In non-production environment, calling `set_auto_start(True)` will print a warning message and return None.
-
-##### Returns
-
-- `bool`: True if auto-start is successfully enabled, False if disabled, None if not supported in the current environment.
-
-#### is_auto_start
+#### `is_auto_start`
 
 ```python
-def is_auto_start(self):
+print(app.is_auto_start())
 ```
 
-Checks if the application is set to start automatically with the system.
+**Returns**
 
-##### Returns
+- `bool`: Whether auto-start is active.
 
-- `bool`: True if auto-start is enabled, False otherwise.
+---
 
-### Miscellaneous
+### File Watcher
 
-#### set_icon
+#### `watch_file`, `watch_directory`, `stop_watching`
+
+Each takes a `str` path and returns `bool`.
+
+#### `get_watched_paths`, `get_watched_files`, `get_watched_directories`
 
 ```python
-def set_icon(self, icon_path: str):
+paths = app.get_watched_paths()
 ```
 
-Sets the application icon.
+**Returns**
 
-##### Parameters
+- `List[str]`: Watched paths or files or directories.
 
-- `icon_path` (str): Icon file path.
-
-#### set_tray_icon
+#### `remove_all_watched_paths`
 
 ```python
-def set_tray_icon(self, tray_icon_path: str):
+app.remove_all_watched_paths()
 ```
 
-Sets the tray icon.
+**Returns**
 
-##### Parameters
+- `None`
 
-- `tray_icon_path` (str): Tray icon file path.
+#### `set_file_change_callback`, `set_directory_change_callback`
 
-#### set_tray_menu_items
+**Parameters**
+
+- **callback** : `Callable[[str], None]`
+
+**Returns**
+
+- `None`
+
+---
+
+### File Dialogs
+
+#### `open_file_dialog`
 
 ```python
-def set_tray_menu_items(self, tray_menu_items: Dict[str, Callable]):
+file_path = app.open_file_dialog(dir="/home/user", filter="Images (*.png *.jpg)")
 ```
 
-Sets the tray menu items.
+**Parameters**
 
-##### Parameters
+- **dir** : `Optional[str]`
+    Initial directory.
+- **filter** : `Optional[str]`
+    Filter for file types.
 
-- `tray_menu_items` (Dict[str, Callable]): Dictionary of menu item labels and callback functions.
+**Returns**
 
-#### run
+- `Optional[str]`: Selected file path or None.
+
+#### `save_file_dialog`
 
 ```python
-def run(self):
+save_path = app.save_file_dialog(dir="/home/user", filter="Text Files (*.txt)")
 ```
 
-Runs the application event loop. This must be executed at the end of your script.
+Same parameters and return type as `open_file_dialog`.
+
+#### `select_directory_dialog`
+
+```python
+dir_path = app.select_directory_dialog(dir="/home/user")
+```
+
+**Parameters**
+
+- **dir** : `Optional[str]`
+    Initial directory.
+
+**Returns**
+
+- `Optional[str]`: Selected directory path or None.
+
+---
+
+### Platform Dirs
+
+Each returns a `str` path to the respective directory:
+
+- `user_data_dir()`
+- `site_data_dir()`
+- `user_cache_dir()`
+- `user_log_dir()`
+- `user_documents_dir()`
+- `user_downloads_dir()`
+- `user_pictures_dir()`
+- `user_videos_dir()`
+- `user_music_dir()`
+- `user_desktop_dir()`
+- `user_runtime_dir()`
+
+---
+
+### Store API
+
+#### `store`
+
+```python
+store = app.store("settings.json")
+store.set("theme", "dark")
+print(store.get("theme"))
+```
+
+**Parameters**
+
+- **path** : `str`
+    File name of the store.
+- **user_data_dir** : `bool`, optional, default: `True`
+    Whether to place the file inside the user data directory.
+
+**Returns**
+
+- `Store`: Store object supporting `.set()` and `.get()`.
+
+---
+
+### Run the App
+
+```python
+app.run()
+```
+
+**Returns**
+
+- `None`: Starts the application event loop.

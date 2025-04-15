@@ -12,12 +12,20 @@
 
 ### 1. Python
 
-- **Required Version**: 3.9 ~ 3.12 (`>=3.9,<3.13`)
+- **Required Version**: 3.9 ~ 3.13 (`>=3.9,<3.14`)
 - If not installed or needs an update, download and install from the official Python website.
 
 [Python Official Website](https://www.python.org/)
 
-### 2. Node.js
+### 2. uv
+
+- **Required**: uv is a Python package installer and environment manager
+- Install with the following command: `pip install uv`
+- Verify installation: Run `uv --version` in the terminal
+
+[uv Official Website](https://docs.astral.sh/uv)
+
+### 3. Node.js
 
 - **Required Version**: 18 or higher
 - Check installation: Run `node --version` in the terminal (ensure it outputs 18.x or higher)

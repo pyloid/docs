@@ -26,12 +26,6 @@ Below is an example of an HTML document that includes a draggable area using the
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
-    <script>
-      document.addEventListener('pyloidReady', function () {
-        console.log('pyloidReady');
-      });
-    </script>
     <title>Draggable Region</title>
   </head>
   <body>

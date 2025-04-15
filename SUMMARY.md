@@ -5,7 +5,7 @@
 ## Getting Started
 
 - [Prerequisites](getting-started/prerequisites.md)
-- [Creating a Project](getting-started/creating-a-project.md)
+- [Create Pyloid App](getting-started/create-pyloid-app.md)
 
 ## API
 
@@ -16,16 +16,18 @@
   - [Monitor](api/python-backend/monitor.md)
   - [TrayEvent](api/python-backend/trayevent.md)
   - [Utility Functions](api/python-backend/utils.md)
+  - [RPC](api/python-backend/rpc.md)
+  - [Store](api/python-backend/store.md)
 - [Javascript (Frontend)](api/javascript-frontend/README.md)
-  - [WindowAPI](api/javascript-frontend/windowapi.md)
-  - [EventAPI](api/javascript-frontend/eventapi.md)
+  - [Event](api/javascript-frontend/event.md)
+  - [BaseAPI](api/javascript-frontend/baseAPI.md)
+  - [RPC](api/javascript-frontend/rpc.md)
 
 ## Guides
 
-- [Custom Your Boilerplate](guides/custom-boilerpalte.md)
 - [Load Webview](guides/load-webview.md)
-- [Calling the Python from JS](guides/calling-the-python-from-js.md)
-- [Calling the JS from Python](guides/calling-the-js-from-python.md)
+- [Calling Python from JS](guides/calling-python-from-js.md)
+- [Calling JS from Python](guides/calling-js-from-python.md)
 - [Keyboard Shotcuts](guides/keyboard-shotcuts.md)
 - [Notification](guides/notification.md)
 - [Tray](guides/tray.md)
@@ -40,9 +42,3 @@
 - [Desktop Monitor](guides/desktop-monitor.md)
 - [File Dialog](guides/file-dialog.md)
 - [Splash Screen](guides/splash-screen.md)
-- [Thread](guides/thread.md)
-- [⚡ Using PySide6 Features for API Customizing](guides/using-pyside-features-for-api-customizing.md)
-- [Themes](guides/themes.md)
-- [Build Guide](guides/build-guide/README.md)
-  - [Pyloid-React-Vite](guides/build-guide/pyloid-react.md)
-  - [Pyloid-HTML-Boilerplate](guides/build-guide/pyloid-html.md)
