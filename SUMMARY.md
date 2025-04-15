@@ -12,7 +12,6 @@
 - [Python (Backend)](api/python-backend/README.md)
   - [Pyloid](api/python-backend/pyloid.md)
   - [BrowserWindow](api/python-backend/browserwindow.md)
-  - [PyloidAPI](api/python-backend/pyloidapi.md)
   - [Monitor](api/python-backend/monitor.md)
   - [TrayEvent](api/python-backend/trayevent.md)
   - [Utility Functions](api/python-backend/utils.md)
@@ -26,6 +25,7 @@
 ## Guides
 
 - [Load Webview](guides/load-webview.md)
+- [Serve Frontend](guides/serve-frontend.md)
 - [Calling Python from JS](guides/calling-python-from-js.md)
 - [Calling JS from Python](guides/calling-js-from-python.md)
 - [Keyboard Shotcuts](guides/keyboard-shotcuts.md)
