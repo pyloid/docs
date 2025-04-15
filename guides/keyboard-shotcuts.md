@@ -2,7 +2,7 @@
 
 ## Adding and Managing Shortcuts
 
-This section explains how to add and manage keyboard shortcuts in a Tauri application.
+This section explains how to add and manage keyboard shortcuts in a Pyloid application.
 
 ### Adding Shortcuts
 
