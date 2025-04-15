@@ -25,7 +25,7 @@ With Pyloid, you can leverage the full power of Python in your desktop applicati
 - **Window Customization**
 - **Detailed Numpy-style Docstrings**
 
-### Quick Start Templates (🛠️ More frontend templates coming soon)
+### Quick Start
 
 {% tabs %}
 {% tab title="npm" %}
