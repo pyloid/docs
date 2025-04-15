@@ -22,3 +22,5 @@ async def greet(name: str):
 ```
 
 This is an example of the `greet` RPC function defined in Python. This function takes a name and returns a greeting message. You can call this function from the frontend to receive a greeting message.
+
+[more python rpc infomation](../python-backend/rpc.md)

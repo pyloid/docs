@@ -7,6 +7,10 @@
 - [Prerequisites](getting-started/prerequisites.md)
 - [Create Pyloid App](getting-started/create-pyloid-app.md)
 
+## Core Concepts
+
+- [Thread Safety](core-concepts/thread-safety.md)
+
 ## API
 
 - [Python (Backend)](api/python-backend/README.md)
