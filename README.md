@@ -1,6 +1,4 @@
-<h1 style="text-align: center; font-size: 200px; font-weight: 500;">
-    <i>Pyloid</i>
-</h1>
+
 
 ![example image](.gitbook/assets/example.png)
 
@@ -27,37 +25,6 @@
 - Node.js
 - Python
 - uv
-
-### Quick Start
-
-{% tabs %}
-{% tab title="npm" %}
-```bash
-npm create pyloid-app@latest
-```
-{% endtab %}
-
-{% tab title="pnpm" %}
-```bash
-pnpm create pyloid-app@latest
-```
-{% endtab %}
-
-{% tab title="yarn" %}
-```bash
-yarn create pyloid-app@latest
-```
-{% endtab %}
-
-{% tab title="bun" %}
-```bash
-bun create pyloid-app@latest
-```
-{% endtab %}
-{% endtabs %}
-
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Getting Started</strong></td><td>Start Pyloid Project</td><td></td><td></td><td><a href="getting-started/prerequisites.md">prerequisites.md</a></td></tr><tr><td>References</td><td>Python/Js API Reference</td><td></td><td></td><td><a href="api/python-backend/">python-backend</a></td></tr><tr><td><strong>Guides</strong></td><td>Pyloid Guide</td><td></td><td></td><td><a href="guides/build-guide/">build-guide</a></td></tr></tbody></table>
-
 
 ### Quick Start
 
