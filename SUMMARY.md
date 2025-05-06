@@ -40,7 +40,7 @@
 - [Clipboard](guides/clipboard.md)
 - [Window Position](guides/position.md)
 - [Devtools](guides/devtools-settings.md)
-- [Window Drag Region](guides/window-customization.md)
+- [Window Drag Region](guides/window-drag-region.md)
 - [Window Radius And Transparent](guides/window-radius-and-transparent.md)
 - [Autostart](guides/autostart.md)
 - [Production Utils](guides/production-utils.md)
