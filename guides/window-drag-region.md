@@ -1,4 +1,4 @@
-# Window Customization
+# Window Drag Region
 
 By using the `data-pyloid-drag-region` attribute, you can make HTML elements draggable. Below is a description of how to customize the window title bar using this attribute.
 
