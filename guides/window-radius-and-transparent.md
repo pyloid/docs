@@ -21,7 +21,8 @@ Use the CSS `border-radius` property to shape your window into a circle, oval, o
 
 ```html
 <style>
-  html, body {
+  html,
+  body {
     margin: 0;
     background: transparent;
   }
@@ -32,6 +33,7 @@ Use the CSS `border-radius` property to shape your window into a circle, oval, o
 ```
 
 You can set different border-radius values to create various shapes:
+
 - `border-radius: 10px;` - Slightly rounded corners
 - `border-radius: 20px 50px;` - Various corner radii
 - `border-radius: 50%;` - Perfect circle
@@ -43,7 +45,8 @@ You can set different border-radius values to create various shapes:
 ```html
 <!-- Won't work -->
 <style>
-  html, body {
+  html,
+  body {
     margin: 0;
     background: transparent;
     border-radius: 9999px;
@@ -52,7 +55,8 @@ You can set different border-radius values to create various shapes:
 
 <!-- Correct method -->
 <style>
-  html, body {
+  html,
+  body {
     margin: 0;
     background: transparent;
   }
@@ -74,12 +78,18 @@ Use the CSS `rgba()` color value to set the window's transparency:
 ```html
 <style>
   #main {
-    background: rgba(255, 255, 255, 0.3); /* White background with 30% opacity */
+    background: rgba(
+      255,
+      255,
+      255,
+      0.3
+    ); /* White background with 30% opacity */
   }
 </style>
 ```
 
 The transparency value is set by the last parameter (alpha channel) in rgba:
+
 - `1.0` - Completely opaque
 - `0.5` - 50% transparent
 - `0.0` - Completely transparent
@@ -90,7 +100,7 @@ The transparency value is set by the last parameter (alpha channel) in rgba:
 
 ```html
 <style>
-  html, 
+  html,
   body {
     margin: 0;
     padding: 0;
@@ -173,6 +183,7 @@ app.run()
 ```
 
 This example demonstrates the following features:
+
 - Creating a frameless window
 - Setting a circular border (`border-radius: 9999px`)
 - Setting a semi-transparent background (`background: rgba(255, 255, 255, 0.3)`)
