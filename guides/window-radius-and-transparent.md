@@ -99,7 +99,7 @@ For frameless transparent or rounded windows, you need to use the `data-pyloid-d
 
 ## Complete Example
 
-![indow-radius-and-transparent image](.gitbook/assets/window-radius-and-transparent.png)
+![window-radius-and-transparent image](/.gitbook/assets/window-radius-and-transparent.png)
 
 Here's a complete example code for creating a circular semi-transparent window:
 
