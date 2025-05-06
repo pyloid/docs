@@ -21,6 +21,10 @@ Use the CSS `border-radius` property to shape your window into a circle, oval, o
 
 ```html
 <style>
+  html, body {
+    margin: 0;
+    background: transparent;
+  }
   #main {
     border-radius: 9999px; /* Circular window */
   }
@@ -28,7 +32,6 @@ Use the CSS `border-radius` property to shape your window into a circle, oval, o
 ```
 
 You can set different border-radius values to create various shapes:
-
 - `border-radius: 10px;` - Slightly rounded corners
 - `border-radius: 20px 50px;` - Various corner radii
 - `border-radius: 50%;` - Perfect circle
@@ -40,15 +43,18 @@ You can set different border-radius values to create various shapes:
 ```html
 <!-- Won't work -->
 <style>
-  body {
+  html, body {
+    margin: 0;
+    background: transparent;
     border-radius: 9999px;
   }
 </style>
 
 <!-- Correct method -->
 <style>
-  body {
+  html, body {
     margin: 0;
+    background: transparent;
   }
   #main {
     width: 100vw;
@@ -68,21 +74,36 @@ Use the CSS `rgba()` color value to set the window's transparency:
 ```html
 <style>
   #main {
-    background: rgba(
-      255,
-      255,
-      255,
-      0.3
-    ); /* White background with 30% opacity */
+    background: rgba(255, 255, 255, 0.3); /* White background with 30% opacity */
   }
 </style>
 ```
 
 The transparency value is set by the last parameter (alpha channel) in rgba:
-
 - `1.0` - Completely opaque
 - `0.5` - 50% transparent
 - `0.0` - Completely transparent
+
+### Critical Requirement
+
+**Important**: For window transparency to work properly, you must set `background: transparent;` on both the `html` and `body` elements. This is essential for the transparent parts of your window to actually appear transparent rather than having a solid background. Example:
+
+```html
+<style>
+  html, 
+  body {
+    margin: 0;
+    padding: 0;
+    background: transparent; /* This is required for transparency to work */
+  }
+  #main {
+    /* Your custom styling with rgba background */
+    background: rgba(255, 255, 255, 0.3);
+  }
+</style>
+```
+
+Without setting `background: transparent;` on these elements, your window will appear with a solid background regardless of the rgba values you set on child elements.
 
 ## Setting Drag Region
 
@@ -121,6 +142,7 @@ html = """
       body {
         margin: 0;
         padding: 0;
+        background: transparent;
       }
       #main {
         width: 100vw;
@@ -151,7 +173,6 @@ app.run()
 ```
 
 This example demonstrates the following features:
-
 - Creating a frameless window
 - Setting a circular border (`border-radius: 9999px`)
 - Setting a semi-transparent background (`background: rgba(255, 255, 255, 0.3)`)
