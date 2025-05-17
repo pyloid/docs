@@ -1,17 +1,22 @@
 # Window Border Radius and Transparency
 
-Pyloid allows you to easily set the border radius and transparency of windows. These features enable you to create various custom UI designs.
+Pyloid allows you to easily set the border radius and transparency of windows. These features enable you to create various custom UI designs, especially frameless and transparent windows.
 
 ## Basic Setup
 
 To set up window border radius and transparency, follow these steps:
 
 1. Use the `frame=False` option when creating a window to remove the default frame.
-2. Use HTML/CSS to set the desired border radius and transparency.
+2. Use the `transparent=True` option
+3. Use HTML/CSS to set the desired border radius and transparency.
 
 ```python
 window = app.create_window(
-    "border-radius and transparent", frame=False, width=500, height=500
+    title="My Transparent Window",
+    frame=False,
+    transparent=True, # Required for a transparent window
+    width=500,
+    height=500
 )
 ```
 
@@ -184,8 +189,8 @@ app.run()
 
 This example demonstrates the following features:
 
-- Creating a frameless window
-- Setting a circular border (`border-radius: 9999px`)
+- Creating a frameless window (frame=False).
+- Enabling window-level transparency (transparent=True).
 - Setting a semi-transparent background (`background: rgba(255, 255, 255, 0.3)`)
 - Setting a draggable area (`data-pyloid-drag-region`)
 
