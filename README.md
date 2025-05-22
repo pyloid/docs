@@ -1,11 +1,12 @@
-
-
 ![example image](.gitbook/assets/example.png)
 
 <h2 align="center" style="font-size: 28px;"><b>Pyloid: Thread-Safe Desktop Apps—Unified with Any Frontend and Python Technology</b></h2>
 
+## Discord 🎉
 
-## 💡 Key Features 
+[Our Discord!](https://discord.gg/VTqexxxTy9)
+
+## 💡 Key Features
 
 - **All Frontend Frameworks** are supported
 - **All features necessary** for a desktop application are implemented
@@ -30,27 +31,35 @@
 
 {% tabs %}
 {% tab title="npm" %}
+
 ```bash
 npm create pyloid-app@latest
 ```
+
 {% endtab %}
 
 {% tab title="pnpm" %}
+
 ```bash
 pnpm create pyloid-app@latest
 ```
+
 {% endtab %}
 
 {% tab title="yarn" %}
+
 ```bash
 yarn create pyloid-app@latest
 ```
+
 {% endtab %}
 
 {% tab title="bun" %}
+
 ```bash
 bun create pyloid-app@latest
 ```
+
 {% endtab %}
 {% endtabs %}
 
