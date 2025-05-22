@@ -20,19 +20,20 @@ store = app.store("store.json")
 ### 1. get
 
 ```python
-store.get(key: str) -> Any
+store.get(key: str, default: Any = None) -> Any
 ```
 
 #### Description
-Returns the value associated with the specified key. If the key does not exist, returns `None`.
+Returns the value associated with the specified key. If the key does not exist, returns `default`.
 
 #### Parameters
 
 - **key** (`str`): The key to retrieve
+- **default** (`Any`): The default value to return if the key does not exist
 
 #### Returns
 
-- **Any**: The value stored for the key, or `None` if not found
+- **Any**: The value stored for the key, or `default` if not found
 
 #### Example
 
