@@ -1,6 +1,6 @@
 ![example image](.gitbook/assets/example.png)
 
-<h2 align="center" style="font-size: 28px;"><b>Pyloid: Thread-Safe Desktop Apps—Unified with Any Frontend and Python Technology</b></h2>
+<h2 align="center" style="font-size: 28px;"><b>Pyloid: Electron for Python Developer • Web-based desktop app framework</b></h2>
 
 ## Discord 🎉
 
